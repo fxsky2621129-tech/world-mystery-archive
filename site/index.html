@@ -19,7 +19,7 @@
 
     <main>
       <section class="hero">
-        <div class="hero-copy"><span class="eyebrow">UNCOVER THE UNEXPLAINED</span><h1>世界の<span>不思議な映像</span>を、<br>ひとつの場所に。</h1><p>幽霊、UFO、怪奇現象、未確認生物。世界の動画投稿サイトを横断して探し、気になる映像を自分だけのライブラリへ。</p><div class="source-pills"><span>🌍 PeerTube</span><span>🎬 ニコニコ動画</span><span>◈ Vimeo <small>Actions経由</small></span></div></div>
+        <div class="hero-copy"><span class="eyebrow">UNCOVER THE UNEXPLAINED</span><h1>世界の<span>不思議な映像</span>を、<br>ひとつの場所に。</h1><p>幽霊、UFO、怪奇現象、未確認生物。世界の動画投稿サイトを横断して探し、気になる映像を自分だけのライブラリへ。</p><div class="source-pills"><span>🌍 PeerTube</span><span>🎬 ニコニコ動画</span><span>◈ Vimeo <small>Actions経由</small></span><span>▶ YouTube <small>Actions経由</small></span></div></div>
         <div class="hero-orbit" aria-hidden="true"><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div><span>?</span></div>
       </section>
 
@@ -32,12 +32,12 @@
         <div class="filter-row">
           <label class="inline-field">言語 <select id="languageMode"><option value="multi">多言語へ展開</option><option value="ja">入力語のみ</option></select></label>
           <label class="inline-field">表示 <select id="sortMode"><option value="relevance">関連度順</option><option value="recent">新着順</option><option value="popular">再生数順</option></select></label>
-          <label class="inline-field">サイト <select id="sourceFilter"><option value="all">全サイト</option><option value="peertube">PeerTube</option><option value="niconico">ニコニコ動画</option><option value="vimeo">Vimeo</option><option value="manual">手動登録</option></select></label>
+          <label class="inline-field">サイト <select id="sourceFilter"><option value="all">全サイト</option><option value="peertube">PeerTube</option><option value="niconico">ニコニコ動画</option><option value="vimeo">Vimeo</option><option value="youtube">YouTube（取得済み）</option><option value="manual">手動登録</option></select></label>
           <label class="checkbox"><input id="familySafe" type="checkbox" checked> セーフサーチ（可能な範囲）</label>
         </div>
         <div class="chips" id="chips" aria-label="ジャンルから探す"><button type="button" data-key="心霊映像">👻 心霊映像</button><button type="button" data-key="UFO">🛸 UFO</button><button type="button" data-key="UMA">🐾 UMA</button><button type="button" data-key="怪奇現象">✧ 怪奇現象</button><button type="button" data-key="廃墟 心霊スポット">⌂ 廃墟</button><button type="button" data-key="不思議映像">◉ 不思議映像</button><button type="button" data-key="おもしろ映像">😂 おもしろ映像</button><button type="button" data-key="動物おもしろ映像">🐶 動物おもしろ映像</button></div>
-        <details class="search-details"><summary>検索の仕組み・詳細設定</summary><p>「世界を検索」はブラウザからPeerTubeとニコニコ動画の公開APIに直接問い合わせます。Vimeoは秘密トークン保護のためGitHub Actionsの一括更新でのみ検索できます。サイト側の接続制限があるときはActionsで更新してください。</p><label for="extraTerms">海外語を追加する（カンマ区切り・任意）</label><input id="extraTerms" placeholder="例：cctv ghost, apparition, espectro" maxlength="240"><p>辞書に登録されたジャンル語だけを多言語展開します。機械翻訳は行いません。</p></details>
-        <div class="syncbar"><span id="syncMessage" role="status" aria-live="polite">検索ワードを入力して検索してください。</span><a id="actionsLink" class="small-link" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Actionsで3サイト一括更新 ↗</a></div>
+        <details class="search-details"><summary>検索の仕組み・詳細設定</summary><p>「世界を検索」はブラウザからPeerTubeとニコニコ動画の公開APIに直接問い合わせます。YouTubeとVimeoはAPIキー・トークン保護のためGitHub Actionsの一括更新でのみ検索できます。サイト側の接続制限があるときはActionsで更新してください。</p><label for="extraTerms">海外語を追加する（カンマ区切り・任意）</label><input id="extraTerms" placeholder="例：cctv ghost, apparition, espectro" maxlength="240"><p>辞書に登録されたジャンル語だけを多言語展開します。機械翻訳は行いません。</p></details>
+        <div class="syncbar"><span id="syncMessage" role="status" aria-live="polite">検索ワードを入力して検索してください。</span><a id="actionsLink" class="small-link" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Actionsで一括更新 ↗</a></div>
       </section>
 
       <section class="library-section">
@@ -54,6 +54,6 @@
   </div>
 
   <dialog id="manualDialog"><form id="manualForm" method="dialog" class="dialog-content"><div class="dialog-head"><h2>動画URLを登録</h2><button type="button" id="closeDialog" aria-label="閉じる">✕</button></div><label for="manualUrl">動画ページのURL</label><input id="manualUrl" type="url" placeholder="https://..." maxlength="2048" required><label for="manualTitle">動画タイトル</label><input id="manualTitle" maxlength="160" placeholder="覚えやすい名前を入力" required><div class="dialog-actions"><button type="button" class="btn subtle" id="cancelDialog">キャンセル</button><button class="btn primary" type="submit">コレクションへ追加</button></div><p id="manualError" class="form-error" role="alert"></p></form></dialog>
-  <script src="./app.js?v=20261016-categories" defer></script>
+  <script src="./app.js?v=20261016-youtube" defer></script>
 </body>
 </html>
