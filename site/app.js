@@ -234,7 +234,7 @@ async function init() {
   $('#addManual').addEventListener('click',openDialog);$('#closeDialog').addEventListener('click',()=>$('#manualDialog').close());$('#cancelDialog').addEventListener('click',()=>$('#manualDialog').close());
   $('#manualForm').addEventListener('submit',addManual);
   $('#exportData').addEventListener('click',exportBackup);$('#importData').addEventListener('click',()=>$('#importFile').click());$('#importFile').addEventListener('change',importBackup);
-  try {const r=await fetch('./data/dictionary.json');if(r.ok){const j=await r.json();state.dictionary=j.groups||[];}}catch(_){}
+  try {const r=await fetch('./data/dictionary.json',{cache:'no-store'});if(r.ok){const j=await r.json();state.dictionary=j.groups||[];}}catch(_){}
   await loadCatalog();
 }
 document.addEventListener('DOMContentLoaded',init);
