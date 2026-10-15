@@ -1,0 +1,10 @@
+{
+  "name": "World Mystery Archive — 世界の不思議映像",
+  "short_name": "Mystery Archive",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080e16",
+  "theme_color": "#101927",
+  "icons": [{"src":"./icon.svg","type":"image/svg+xml","sizes":"any","purpose":"any maskable"}]
+}

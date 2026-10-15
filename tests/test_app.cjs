@@ -1,0 +1,72 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const vm = require('node:vm');
+const fs = require('node:fs');
+const path = require('node:path');
+const source = fs.readFileSync(path.join(__dirname, '../site/app.js'), 'utf8');
+function app() {
+  const elements = new Map();
+  const element = sel => {
+    if (!elements.has(sel)) elements.set(sel, {value:'all', hidden:false, textContent:'',
+      replaceChildren(...items){this.children=items;},close(){this.closed=true;},reset(){},
+    });
+    return elements.get(sel);
+  };
+  const storage = new Map();
+  const ctx = vm.createContext({URL, URLSearchParams, Intl, AbortSignal,
+    localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},
+    document:{querySelector:element,querySelectorAll:()=>[],addEventListener(){}},
+    location:{hostname:'example.org',pathname:'/'},
+  });
+  vm.runInContext(source,ctx);
+  return {ctx,element,run:code=>vm.runInContext(code,ctx)};
+}
+test('distinct case and trailing slash URLs are not dropped',()=>{
+  const a=app();
+  assert.equal(a.run("dedupe(['Abc','abc','abc/'].map(x=>normalizeRecord({url:'https://example.org/'+x}))).length"),3);
+});
+test('all 500 saved favorites can be displayed',()=>{
+  const a=app();
+  a.run("makeCard=v=>v; state.tab='favorites'; state.favorites=Array.from({length:500},(_,i)=>normalizeRecord({url:'https://example.org/'+i})); render();");
+  assert.equal(a.element('#cards').children.length,500);
+});
+test('failed favorite save leaves current state intact',()=>{
+  const a=app();
+  a.run("localStorage.setItem=()=>{throw Error('quota');}; toggleFavorite(normalizeRecord({url:'https://example.org/a'}));");
+  assert.equal(a.run('state.favorites.length'),0);
+  assert.ok(a.element('#notice').textContent);
+});
+test('failed manual save does not close dialog or report success',()=>{
+  const a=app();a.element('#manualUrl').value='https://example.org/a';a.element('#manualTitle').value='test';
+  a.run("localStorage.setItem=()=>{throw Error('quota');}; addManual({preventDefault(){}});");
+  assert.equal(a.run('state.manual.length'),0);
+  assert.equal(a.element('#manualDialog').closed,undefined);
+  assert.ok(a.element('#manualError').textContent);
+});
+test('manual addition resets conflicting site filter',()=>{
+  const a=app();a.element('#manualUrl').value='https://example.org/a';a.element('#manualTitle').value='test';a.element('#sourceFilter').value='vimeo';
+  a.run('makeCard=v=>v; addManual({preventDefault(){}});');
+  assert.equal(a.element('#sourceFilter').value,'all');
+  assert.equal(a.element('#cards').children.length,1);
+});
+test('malformed API response fails instead of appearing empty',async()=>{
+  const a=app();a.ctx.fetch=async()=>({ok:true,json:async()=>({error:'bad'})});
+  await assert.rejects(a.run("searchPeerTube('ghost',true)"));
+});
+test('catalog reload failure retains displayed search results',async()=>{
+  const a=app();a.run("makeCard=v=>v; state.live=[normalizeRecord({url:'https://example.org/a'})];");
+  a.ctx.fetch=async()=>{throw Error('offline');};
+  await a.run('loadCatalog()');
+  assert.equal(a.run('state.live.length'),1);
+});
+test('invalid thumbnail does not discard otherwise valid video',async()=>{
+  const a=app();a.ctx.fetch=async()=>({ok:true,json:async()=>({data:[{url:'https://example.org/a',thumbnailUrl:'https://[bad'}]})});
+  assert.equal((await a.run("searchPeerTube('ghost',true)")).length,1);
+});
+test('failed backup saves are not reported as successful',async()=>{
+  const a=app();a.run("localStorage.setItem=()=>{throw Error('quota');};");
+  a.ctx.event={target:{files:[{size:100,text:async()=>JSON.stringify({app:'WorldMysteryArchive',version:1,favorites:[{url:'https://example.org/a'}],manual:[]})}]}};
+  await a.run('importBackup(event)');
+  assert.equal(a.run('state.favorites.length'),0);
+  assert.match(a.element('#notice').textContent,/保存できません/);
+});

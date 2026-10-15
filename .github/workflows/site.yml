@@ -1,0 +1,101 @@
+name: 公開と手動検索
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      search_query:
+        description: "検索する日本語フリーワード（例：心霊映像）"
+        required: true
+        default: "心霊映像"
+        type: string
+      language_mode:
+        description: "検索言語"
+        required: true
+        default: "multi"
+        type: choice
+        options: [multi, ja]
+      extra_terms:
+        description: "追加したい海外語（カンマ区切り、任意）"
+        required: false
+        default: ""
+        type: string
+      search_sites:
+        description: "検索するサイト（Vimeoは秘密トークン設定時のみ）"
+        required: true
+        default: "peertube,niconico,vimeo"
+        type: choice
+        options:
+          - "peertube,niconico,vimeo"
+          - "peertube,niconico"
+          - "peertube"
+          - "niconico"
+          - "vimeo"
+      family_safe:
+        description: "PeerTubeでNSFWを除外"
+        required: true
+        default: true
+        type: boolean
+permissions:
+  contents: write
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 公開前の回帰テスト
+        run: |
+          python -m unittest discover -s tests -v
+          node --check site/app.js
+          node --test tests/test_app.cjs
+      - name: 公開APIから動画を取得（手動実行時のみ）
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          SEARCH_QUERY: ${{ inputs.search_query }}
+          SEARCH_MODE: ${{ inputs.language_mode }}
+          SEARCH_EXTRA: ${{ inputs.extra_terms }}
+          SEARCH_SITES: ${{ inputs.search_sites }}
+          SEARCH_SAFE: ${{ inputs.family_safe }}
+          VIMEO_ACCESS_TOKEN: ${{ secrets.VIMEO_ACCESS_TOKEN }}
+        run: python scripts/search.py
+      - name: 最新検索結果をコミット（手動実行時のみ）
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data/catalog.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update manual video search catalog'
+            git push
+          fi
+      - name: Pages設定
+        uses: actions/configure-pages@v5
+      - name: Webアプリのファイルをアップロード
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+    steps:
+      - name: GitHub Pagesに公開
+        id: deployment
+        uses: actions/deploy-pages@v4
