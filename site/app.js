@@ -30,7 +30,7 @@ function normalizeRecord(raw) {
   const url = safeUrl(raw.url);
   if (!url) return null;
   const title = String(raw.title || '無題の動画').replace(/[\x00-\x1f]/g, ' ').slice(0, 180);
-  const sites = ['peertube', 'niconico', 'vimeo', 'manual'];
+  const sites = ['peertube', 'niconico', 'vimeo', 'youtube', 'manual'];
   const site = sites.includes(raw.site) ? raw.site : 'manual';
   return {
     id: site + ':' + url, url,
@@ -79,7 +79,7 @@ function makeCard(video) {
     img.addEventListener('error', () => {img.remove(); addPlaceholder(thumb);}, {once:true}); thumb.append(img);
   } else addPlaceholder(thumb);
   const pill = document.createElement('span'); pill.className = 'site-pill';
-  pill.textContent = ({peertube:'🌍 PeerTube',niconico:'🎬 ニコニコ',vimeo:'◈ Vimeo',manual:'✎ 手動登録'})[video.site] || video.site;
+  pill.textContent = ({peertube:'🌍 PeerTube',niconico:'🎬 ニコニコ',vimeo:'◈ Vimeo',youtube:'▶ YouTube',manual:'✎ 手動登録'})[video.site] || video.site;
   thumb.append(pill);
   const body = document.createElement('div'); body.className = 'card-body';
   const title = document.createElement('span'); title.className='video-title'; title.textContent=video.title;
@@ -159,6 +159,11 @@ async function runSearch(event) {
   const source=$('#sourceFilter').value;const tasks=[];
   if (source==='all'||source==='peertube') terms.forEach(term=>tasks.push({site:'PeerTube',term,run:()=>searchPeerTube(term,$('#familySafe').checked)}));
   if (source==='all'||source==='niconico') tasks.push({site:'ニコニコ動画',term:query,run:()=>searchNiconico(query)});
+  if (source==='youtube') {
+    state.live=catalogFallback(query,new Set(['youtube']));state.searching=false;$('#runSearch').disabled=false;setTab('all');
+    setStatus('YouTubeの保存済み検索結果：'+state.live.length+'件');
+    showNotice('YouTubeの新規取得はGitHub Actionsで行います。YOUTUBE_API_KEYを設定して検索語「'+query+'」で一括更新し、完了後に公開データを再読込してください。');return;
+  }
   if (source==='vimeo') {showNotice('Vimeoの検索はGitHub Actionsの「Run workflow」から一括更新してください。APIトークンをブラウザに置かないための安全対策です。');state.searching=false;$('#runSearch').disabled=false;return;}
   if (source==='manual') {state.searching=false;$('#runSearch').disabled=false;setTab('manual');return;}
   setTab('all');setStatus('公開APIを検索中：'+tasks.length+'件の問い合わせ（無料・手動実行）');showNotice('');
@@ -167,10 +172,11 @@ async function runSearch(event) {
   const failures=settled.map((r,i)=>r.status==='rejected'?tasks[i].site+'('+tasks[i].term+')':null).filter(Boolean);
   const fresh=dedupe(success.flatMap(r=>r.value));
   const failedSites=new Set(settled.flatMap((r,i)=>r.status==='rejected' ? [tasks[i].site==='PeerTube'?'peertube':'niconico'] : []));
+  if(source==='all')failedSites.add('youtube');
   const saved=catalogFallback(query,failedSites);
   state.live=dedupe([...saved,...fresh]);state.searching=false;$('#runSearch').disabled=false;render();
   setStatus('検索結果：'+state.live.length+'件（新規取得 '+fresh.length+'件・保存済みデータ '+saved.length+'件、重複を除外）');
-  if (failures.length) showNotice('直接検索できなかったサイト：'+[...new Set(failures.map(f=>f.split('(')[0]))].join('、')+'。'+(saved.length ? '検索語に対応する保存済みデータを表示しています。' : '検索語に対応する保存済みデータはありません。')+' 最新のニコニコ動画を取得するには「GitHub Actionsで3サイト一括更新」で検索語「'+query+'」を指定し、完了後に「公開データ再読込」を押してください。');
+  if (failures.length) showNotice('直接検索できなかったサイト：'+[...new Set(failures.map(f=>f.split('(')[0]))].join('、')+'。'+(saved.length ? '検索語に対応する保存済みデータを表示しています。' : '検索語に対応する保存済みデータはありません。')+' 最新のニコニコ動画を取得するには「GitHub Actionsで一括更新」で検索語「'+query+'」を指定し、完了後に「公開データ再読込」を押してください。');
 }
 
 function catalogFallback(query, sites) {
