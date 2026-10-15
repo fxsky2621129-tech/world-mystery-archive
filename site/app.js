@@ -7,7 +7,7 @@ const MAX_LOCAL = 500;
 const state = {
   catalog: [], live: null, tab: 'all', favorites: loadItems(STORE_FAVORITES),
   manual: loadItems(STORE_MANUAL), dictionary: [], searching: false,
-  sources: [], query: '', updatedAt: null,
+  sources: [], query: '', catalogQuery: '', updatedAt: null,
 };
 
 function loadItems(key) {
@@ -114,6 +114,7 @@ async function loadCatalog() {
     const res=await fetch('./data/catalog.json?fresh='+Date.now(),{cache:'no-store'});
     if (!res.ok) throw new Error('HTTP '+res.status);
     const json=await res.json();state.catalog=dedupe((json.videos||[]).map(normalizeRecord).filter(Boolean));
+    state.catalogQuery=String(json.query || '');
     state.updatedAt=json.updated_at || null;state.sources=Array.isArray(json.sources)?json.sources:[];
     $('#latestStamp').textContent=state.updatedAt?'公開データ最終更新 '+new Date(state.updatedAt).toLocaleString('ja-JP'):'公開データ未取得';
     if (state.sources.some(s=>(s.status==='error'||s.status==='partial'))) showNotice('前回の一括更新で一部サイトの取得が失敗しました。'+state.sources.filter(s=>(s.status==='error'||s.status==='partial')).map(s=>s.site).join('、'));
@@ -164,9 +165,19 @@ async function runSearch(event) {
   const settled=await Promise.allSettled(tasks.map(t=>t.run()));
   const success=settled.filter(r=>r.status==='fulfilled');
   const failures=settled.map((r,i)=>r.status==='rejected'?tasks[i].site+'('+tasks[i].term+')':null).filter(Boolean);
-  state.live=success.length ? dedupe(success.flatMap(r=>r.value)) : null;state.searching=false;$('#runSearch').disabled=false;render();
-  setStatus('新規検索：'+(state.live?.length || 0)+'件 / 成功 '+success.length+'回・失敗 '+failures.length+'回');
-  if (failures.length) showNotice('一部のAPIに接続できませんでした：'+failures.slice(0,5).join('、')+'。ブラウザのCORS制限、API障害、検索件数制限等が考えられます。GitHub Actionsからの一括更新をお試しください。');
+  const fresh=dedupe(success.flatMap(r=>r.value));
+  const failedSites=new Set(settled.flatMap((r,i)=>r.status==='rejected' ? [tasks[i].site==='PeerTube'?'peertube':'niconico'] : []));
+  const saved=catalogFallback(query,failedSites);
+  state.live=dedupe([...saved,...fresh]);state.searching=false;$('#runSearch').disabled=false;render();
+  setStatus('検索結果：'+state.live.length+'件（新規取得 '+fresh.length+'件・保存済みデータ '+saved.length+'件、重複を除外）');
+  if (failures.length) showNotice('直接検索できなかったサイト：'+[...new Set(failures.map(f=>f.split('(')[0]))].join('、')+'。'+(saved.length ? '検索語に対応する保存済みデータを表示しています。' : '検索語に対応する保存済みデータはありません。')+' 最新のニコニコ動画を取得するには「GitHub Actionsで3サイト一括更新」で検索語「'+query+'」を指定し、完了後に「公開データ再読込」を押してください。');
+}
+
+function catalogFallback(query, sites) {
+  const normalized=query.trim().toLocaleLowerCase();
+  const sameQuery=normalized===state.catalogQuery.trim().toLocaleLowerCase();
+  const words=normalized.split(/\s+/).filter(Boolean);
+  return state.catalog.filter(v=>sites.has(v.site) && (sameQuery || words.every(word=>(v.title+' '+v.author).toLocaleLowerCase().includes(word))));
 }
 
 function setupGitHubLink() {
