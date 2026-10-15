@@ -5,6 +5,7 @@ Secrets are read from environment; never written to JSON or site files.
 No scheduled or automated background fetching is configured.
 """
 import json
+from html import unescape
 import os
 import re
 import sys
@@ -18,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / 'site' / 'data' / 'catalog.json'
 DICTIONARY = ROOT / 'site' / 'data' / 'dictionary.json'
 USER_AGENT = 'WorldMysteryArchive/1.0 (personal discovery tool)'
-ALLOWED_SITES = {'peertube', 'niconico', 'vimeo'}
+ALLOWED_SITES = {'peertube', 'niconico', 'vimeo', 'youtube'}
 
 
 def get_json(url, headers=None):
@@ -144,6 +145,31 @@ def search_vimeo(keyword, token, limit=20):
     return records
 
 
+
+def search_youtube(keyword, api_key, safe=True, limit=25):
+    params = urlencode({'part': 'snippet', 'type': 'video', 'q': keyword,
+                        'maxResults': min(limit, 50), 'order': 'relevance',
+                        'safeSearch': 'strict' if safe else 'none', 'key': api_key})
+    data = get_json('https://www.googleapis.com/youtube/v3/search?' + params)
+    if not isinstance(data, dict) or not isinstance(data.get('items'), list):
+        raise ValueError('YouTube APIの応答形式が不正です')
+    records = []
+    for item in data['items']:
+        if not isinstance(item, dict):
+            continue
+        vid = (item.get('id') or {}).get('videoId', '')
+        if not isinstance(vid, str) or not re.fullmatch(r'[A-Za-z0-9_-]{11}', vid):
+            continue
+        snippet = item.get('snippet') or {}
+        thumbs = snippet.get('thumbnails') or {}
+        thumbnail = (thumbs.get('high') or thumbs.get('medium') or thumbs.get('default') or {}).get('url')
+        record = valid_record('youtube', 'https://www.youtube.com/watch?v=' + vid,
+                              unescape(snippet.get('title') or ''), thumbnail,
+                              published=snippet.get('publishedAt'), author=snippet.get('channelTitle'))
+        if record:
+            records.append(record)
+    return records
+
 def read_existing():
     try:
         return json.loads(CATALOG.read_text(encoding='utf-8'))
@@ -151,7 +177,7 @@ def read_existing():
         return {'videos': []}
 
 
-def run(query, mode='multi', extra='', sites='peertube,niconico,vimeo', safe=True):
+def run(query, mode='multi', extra='', sites='youtube,peertube,niconico,vimeo', safe=True):
     query = query.strip()
     if not query or len(query) > 120:
         raise ValueError('検索語は1〜120文字にしてください')
@@ -163,7 +189,11 @@ def run(query, mode='multi', extra='', sites='peertube,niconico,vimeo', safe=Tru
     videos, summaries = [], []
     succeeded = 0
     for site in chosen:
-        searches = [query] if site == 'niconico' else terms
+        searches = [query] if site in ('niconico', 'youtube') else terms
+        api_key = os.environ.get('YOUTUBE_API_KEY', '').strip()
+        if site == 'youtube' and not api_key:
+            summaries.append({'site': site, 'status': 'skipped', 'count': 0, 'reason': 'YOUTUBE_API_KEY未設定'})
+            continue
         token = os.environ.get('VIMEO_ACCESS_TOKEN', '').strip()
         if site == 'vimeo' and not token:
             summaries.append({'site': site, 'status': 'skipped', 'count': 0, 'reason': 'VIMEO_ACCESS_TOKEN未設定'})
@@ -172,7 +202,9 @@ def run(query, mode='multi', extra='', sites='peertube,niconico,vimeo', safe=Tru
         errors = []
         for term in searches:
             try:
-                if site == 'peertube':
+                if site == 'youtube':
+                    items = search_youtube(term, api_key, safe=safe)
+                elif site == 'peertube':
                     items = search_peertube(term, safe=safe)
                 elif site == 'niconico':
                     items = search_niconico(term)
@@ -182,7 +214,7 @@ def run(query, mode='multi', extra='', sites='peertube,niconico,vimeo', safe=Tru
                 videos.extend(items)
                 count += len(items)
             except (HTTPError, URLError, TimeoutError, ValueError, KeyError, TypeError, AttributeError, OSError) as exc:
-                errors.append(f'{type(exc).__name__}: {getattr(exc, "code", str(exc))}'[:120])
+                errors.append(f'{type(exc).__name__}: HTTP {exc.code}' if isinstance(exc, HTTPError) else type(exc).__name__)
         summaries.append({'site': site, 'status': 'ok' if not errors else 'partial' if count or len(errors) < len(searches) else 'error',
                           'count': count, 'errors': errors[:3]})
     if succeeded == 0:
@@ -203,7 +235,7 @@ if __name__ == '__main__':
         run(search_query,
             mode=os.environ.get('SEARCH_MODE', 'multi'),
             extra=os.environ.get('SEARCH_EXTRA', ''),
-            sites=os.environ.get('SEARCH_SITES', 'peertube,niconico,vimeo'),
+            sites=os.environ.get('SEARCH_SITES', 'youtube,peertube,niconico,vimeo'),
             safe=os.environ.get('SEARCH_SAFE', 'true').lower() != 'false')
     except (RuntimeError, ValueError) as exc:
         print(str(exc), file=sys.stderr)
