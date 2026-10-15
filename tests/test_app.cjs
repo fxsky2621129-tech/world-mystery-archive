@@ -4,6 +4,17 @@ const vm = require('node:vm');
 const fs = require('node:fs');
 const path = require('node:path');
 const source = fs.readFileSync(path.join(__dirname, '../site/app.js'), 'utf8');
+test('YouTube records remain identifiable in the library',()=>{
+  assert.equal(app().run("normalizeRecord({site:'youtube',url:'https://www.youtube.com/watch?v=AbC123xyz_-'}).site"),'youtube');
+});
+test('YouTube filter searches saved results without exposing a key',async()=>{
+  const a=app();a.element('#query').value='cats';a.element('#sourceFilter').value='youtube';
+  a.run("makeCard=v=>v; state.catalogQuery='cats'; state.catalog=[normalizeRecord({site:'youtube',url:'https://www.youtube.com/watch?v=AbC123xyz_-',title:'Cats'})];");
+  a.ctx.fetch=()=>{throw Error('must not request YouTube from browser');};
+  await a.run('runSearch()');
+  assert.equal(a.element('#cards').children.length,1);
+  assert.equal(a.run('state.searching'),false);
+});
 test('failed niconico search keeps matching published results beside fresh results',async()=>{
   const a=app();a.element('#query').value='心霊映像';
   a.run("makeCard=v=>v; state.catalogQuery='心霊映像'; state.catalog=[normalizeRecord({site:'niconico',url:'https://www.nicovideo.jp/watch/sm1',title:'怖い動画'})]; searchPeerTube=async()=>[normalizeRecord({site:'peertube',url:'https://example.org/a'})]; searchNiconico=async()=>{throw Error('CORS');};");
