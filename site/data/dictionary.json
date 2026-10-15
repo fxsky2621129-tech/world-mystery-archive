@@ -1,10 +1,153 @@
 {
   "groups": [
-    {"id":"ghost","label":"心霊・幽霊","triggers":["心霊","幽霊","おばけ","お化け","ghost","spirit","haunted"],"terms":["ghost caught on camera","fantasma captado en cámara","fantôme filmé","귀신 영상","监控 灵异"]},
-    {"id":"ufo","label":"UFO・宇宙人","triggers":["ufo","未確認飛行物体","宇宙人","エイリアン","alien"],"terms":["UFO sighting","OVNI avistamiento","OVNI vidéo","미확인 비행 물체","不明飞行物"]},
-    {"id":"uma","label":"UMA・未確認生物","triggers":["uma","未確認生物","怪物","ビッグフット","cryptid","bigfoot"],"terms":["cryptid sighting","mysterious creature footage","criatura misteriosa","미확인 생물","神秘生物"]},
-    {"id":"paranormal","label":"怪奇現象","triggers":["怪奇","不可思議","超常","ポルターガイスト","paranormal","poltergeist"],"terms":["paranormal activity footage","poltergeist caught on camera","fenómeno paranormal","초자연 현상","超自然现象"]},
-    {"id":"ruins","label":"廃墟・心霊スポット","triggers":["廃墟","心霊スポット","廃病院","haunted house","abandoned"],"terms":["abandoned haunted places","haunted exploration","lugares embrujados","흉가 탐험","废弃鬼屋"]},
-    {"id":"mystery","label":"不思議映像・謎","triggers":["不思議","謎","ミステリー","奇妙","mystery","strange"],"terms":["unexplained strange footage","mysterious caught on camera","vídeos inexplicables","미스터리 영상","神秘视频"]}
+    {
+      "id": "funny-animals",
+      "label": "動物おもしろ映像",
+      "triggers": [
+        "動物おもしろ",
+        "動物面白",
+        "おもしろ動物",
+        "面白い動物",
+        "funny animal"
+      ],
+      "terms": [
+        "funny animals",
+        "animales graciosos",
+        "animaux drôles",
+        "웃긴 동물",
+        "搞笑动物"
+      ]
+    },
+    {
+      "id": "funny",
+      "label": "おもしろ映像",
+      "triggers": [
+        "おもしろ",
+        "面白",
+        "爆笑",
+        "funny",
+        "hilarious"
+      ],
+      "terms": [
+        "funny videos",
+        "videos graciosos",
+        "vidéos drôles",
+        "웃긴 영상",
+        "搞笑视频"
+      ]
+    },
+    {
+      "id": "ghost",
+      "label": "心霊・幽霊",
+      "triggers": [
+        "心霊",
+        "幽霊",
+        "おばけ",
+        "お化け",
+        "ghost",
+        "spirit",
+        "haunted"
+      ],
+      "terms": [
+        "ghost caught on camera",
+        "fantasma captado en cámara",
+        "fantôme filmé",
+        "귀신 영상",
+        "监控 灵异"
+      ]
+    },
+    {
+      "id": "ufo",
+      "label": "UFO・宇宙人",
+      "triggers": [
+        "ufo",
+        "未確認飛行物体",
+        "宇宙人",
+        "エイリアン",
+        "alien"
+      ],
+      "terms": [
+        "UFO sighting",
+        "OVNI avistamiento",
+        "OVNI vidéo",
+        "미확인 비행 물체",
+        "不明飞行物"
+      ]
+    },
+    {
+      "id": "uma",
+      "label": "UMA・未確認生物",
+      "triggers": [
+        "uma",
+        "未確認生物",
+        "怪物",
+        "ビッグフット",
+        "cryptid",
+        "bigfoot"
+      ],
+      "terms": [
+        "cryptid sighting",
+        "mysterious creature footage",
+        "criatura misteriosa",
+        "미확인 생물",
+        "神秘生物"
+      ]
+    },
+    {
+      "id": "paranormal",
+      "label": "怪奇現象",
+      "triggers": [
+        "怪奇",
+        "不可思議",
+        "超常",
+        "ポルターガイスト",
+        "paranormal",
+        "poltergeist"
+      ],
+      "terms": [
+        "paranormal activity footage",
+        "poltergeist caught on camera",
+        "fenómeno paranormal",
+        "초자연 현상",
+        "超自然现象"
+      ]
+    },
+    {
+      "id": "ruins",
+      "label": "廃墟・心霊スポット",
+      "triggers": [
+        "廃墟",
+        "心霊スポット",
+        "廃病院",
+        "haunted house",
+        "abandoned"
+      ],
+      "terms": [
+        "abandoned haunted places",
+        "haunted exploration",
+        "lugares embrujados",
+        "흉가 탐험",
+        "废弃鬼屋"
+      ]
+    },
+    {
+      "id": "mystery",
+      "label": "不思議映像・謎",
+      "triggers": [
+        "不思議",
+        "謎",
+        "ミステリー",
+        "奇妙",
+        "mystery",
+        "strange"
+      ],
+      "terms": [
+        "unexplained strange footage",
+        "mysterious caught on camera",
+        "vídeos inexplicables",
+        "미스터리 영상",
+        "神秘视频"
+      ]
+    }
   ]
 }
