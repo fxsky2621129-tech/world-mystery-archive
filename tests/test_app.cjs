@@ -4,6 +4,26 @@ const vm = require('node:vm');
 const fs = require('node:fs');
 const path = require('node:path');
 const source = fs.readFileSync(path.join(__dirname, '../site/app.js'), 'utf8');
+test('failed niconico search keeps matching published results beside fresh results',async()=>{
+  const a=app();a.element('#query').value='心霊映像';
+  a.run("makeCard=v=>v; state.catalogQuery='心霊映像'; state.catalog=[normalizeRecord({site:'niconico',url:'https://www.nicovideo.jp/watch/sm1',title:'怖い動画'})]; searchPeerTube=async()=>[normalizeRecord({site:'peertube',url:'https://example.org/a'})]; searchNiconico=async()=>{throw Error('CORS');};");
+  await a.run('runSearch()');
+  assert.equal(a.run('state.live.length'),2);
+  assert.match(a.element('#notice').textContent,/保存済みデータを表示/);
+  assert.equal(a.run('state.searching'),false);
+});
+test('failed search for another query does not show unrelated old results',async()=>{
+  const a=app();a.element('#query').value='UFO';
+  a.run("makeCard=v=>v; state.catalogQuery='心霊映像'; state.catalog=[normalizeRecord({site:'niconico',url:'https://www.nicovideo.jp/watch/sm1',title:'幽霊'})]; searchPeerTube=async()=>[]; searchNiconico=async()=>{throw Error('CORS');};");
+  await a.run('runSearch()');
+  assert.equal(a.run('state.live.length'),0);
+  assert.match(a.element('#notice').textContent,/保存済みデータはありません/);
+});
+test('published fallback supports title matching for a new query',()=>{
+  const a=app();
+  a.run("state.catalogQuery='心霊映像'; state.catalog=[normalizeRecord({site:'niconico',url:'https://www.nicovideo.jp/watch/sm1',title:'UFO 目撃映像'})];");
+  assert.equal(a.run("catalogFallback('ufo 目撃',new Set(['niconico'])).length"),1);
+});
 function app() {
   const elements = new Map();
   const element = sel => {
