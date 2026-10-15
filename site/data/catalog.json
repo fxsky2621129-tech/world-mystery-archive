@@ -1,8 +1,1165 @@
 {
-  "updated_at": null,
-  "query": "",
+  "updated_at": "2026-10-15T10:50:49.064856+00:00",
+  "query": "心霊映像",
   "language_mode": "multi",
-  "queries": [],
-  "sources": [],
-  "videos": []
+  "queries": [
+    "心霊映像",
+    "ghost caught on camera",
+    "fantasma captado en cámara",
+    "fantôme filmé",
+    "귀신 영상",
+    "监控 灵异"
+  ],
+  "sources": [
+    {
+      "site": "peertube",
+      "status": "ok",
+      "count": 83,
+      "errors": []
+    },
+    {
+      "site": "niconico",
+      "status": "ok",
+      "count": 30,
+      "errors": []
+    },
+    {
+      "site": "vimeo",
+      "status": "skipped",
+      "count": 0,
+      "reason": "VIMEO_ACCESS_TOKEN未設定"
+    }
+  ],
+  "videos": [
+    {
+      "id": "peertube:https://peertube.slat.org/videos/watch/993fe23c-1159-4701-85c5-b20e407210d4",
+      "site": "peertube",
+      "url": "https://peertube.slat.org/videos/watch/993fe23c-1159-4701-85c5-b20e407210d4",
+      "title": "《覺醒的心靈》系列影片第一部：《認識自我（Know Thyself）》 - Awakening Mind Part 1, \"Know Thyself\" (2023)",
+      "thumbnail": "https://peertube.slat.org/lazy-static/thumbnails/6467f7bc-ac26-46fb-9e06-cef61108733d.jpg",
+      "views": 183,
+      "published": "2023-06-17T14:27:56.561Z",
+      "author": "喚醒世界系列影片"
+    },
+    {
+      "id": "peertube:https://peertube.slat.org/videos/watch/d181b378-8df8-4646-8208-d449393b9afe",
+      "site": "peertube",
+      "url": "https://peertube.slat.org/videos/watch/d181b378-8df8-4646-8208-d449393b9afe",
+      "title": "《覺醒的心靈》系列影片第二部：《揭開心靈的面紗》預告片 --  Awakening Mind Film Part 2 -\"The Mind Unveiled\" (Official Trailer)",
+      "thumbnail": "https://peertube.slat.org/lazy-static/thumbnails/276303cc-9620-4b9b-a738-cbe25e5b1eb3.jpg",
+      "views": 13,
+      "published": "2023-12-26T07:30:47.667Z",
+      "author": "喚醒世界系列影片"
+    },
+    {
+      "id": "peertube:https://peertube.slat.org/videos/watch/c7402516-e256-4140-b67c-5c12644e4f9b",
+      "site": "peertube",
+      "url": "https://peertube.slat.org/videos/watch/c7402516-e256-4140-b67c-5c12644e4f9b",
+      "title": "《覺醒的心靈》系列影片第三部：《解脫》 - Awakening Mind Part 3, \"Liberation\" (2025) - 完整 HD 影片",
+      "thumbnail": "https://peertube.slat.org/lazy-static/thumbnails/a08f6365-adb6-403c-919e-27fa5d4e49fb.jpg",
+      "views": 7,
+      "published": "2025-08-05T02:11:11.456Z",
+      "author": "喚醒世界系列影片"
+    },
+    {
+      "id": "peertube:https://peertube.slat.org/videos/watch/f8b826d5-d6b1-49d3-9756-a0fa02f45bb7",
+      "site": "peertube",
+      "url": "https://peertube.slat.org/videos/watch/f8b826d5-d6b1-49d3-9756-a0fa02f45bb7",
+      "title": "《覺醒的心靈》系列影片第二部：《揭開心靈的面紗》 —  Awakening Mind Part 2 - \"The Mind Unveiled\" (2024) - 完整 HD 影片",
+      "thumbnail": "https://peertube.slat.org/lazy-static/thumbnails/11e8489f-329a-4246-97ae-70d85280551f.jpg",
+      "views": 6,
+      "published": "2025-08-05T01:59:16.604Z",
+      "author": "喚醒世界系列影片"
+    },
+    {
+      "id": "peertube:https://peertube.slat.org/videos/watch/fdd22d09-c9f7-4a81-8be8-89148050a2c6",
+      "site": "peertube",
+      "url": "https://peertube.slat.org/videos/watch/fdd22d09-c9f7-4a81-8be8-89148050a2c6",
+      "title": "cn.MP4",
+      "thumbnail": "https://peertube.slat.org/lazy-static/thumbnails/38bce0c0-1902-4403-b185-09b4df0923e8.jpg",
+      "views": 4,
+      "published": "2022-08-18T12:41:14.042Z",
+      "author": "my favorite"
+    },
+    {
+      "id": "peertube:https://lostpod.space/videos/watch/e458d9b0-ad3b-4ba5-9511-f1251c7ac1d8",
+      "site": "peertube",
+      "url": "https://lostpod.space/videos/watch/e458d9b0-ad3b-4ba5-9511-f1251c7ac1d8",
+      "title": "放鬆音樂, 治療音樂冥想舒緩按摩, 深度睡眠, Relaxing Relax Music,Spa Music,Study Music",
+      "thumbnail": "https://lostpod.space/lazy-static/thumbnails/099f08e0-8fc0-4db6-b998-66e70a9c71f3.jpg",
+      "views": 155,
+      "published": "2018-09-24T00:16:11.139Z",
+      "author": "Main suzu channel"
+    },
+    {
+      "id": "peertube:https://fedimovie.com/videos/watch/aa58ef07-75c9-442b-91ca-fddac7ad8dc1",
+      "site": "peertube",
+      "url": "https://fedimovie.com/videos/watch/aa58ef07-75c9-442b-91ca-fddac7ad8dc1",
+      "title": "【博麗霊夢・霧雨魔理沙・魂魄妖夢】博麗霊夢さんと霧雨魔理沙さんと魂魄妖夢さんに \"Luminous Moment\" を踊って頂いた【COM3D2】",
+      "thumbnail": "https://fedimovie.com/lazy-static/thumbnails/75fbde77-ee66-46d7-bfe2-775ffe05e21b.jpg",
+      "views": 20,
+      "published": "2024-03-31T01:19:43.462Z",
+      "author": "Z.OOL.ネット信託統治領 Fedimovie 諸島"
+    },
+    {
+      "id": "peertube:https://wiwi.video/videos/watch/a1e2733e-3259-4bfd-b9e5-04d8808398fa",
+      "site": "peertube",
+      "url": "https://wiwi.video/videos/watch/a1e2733e-3259-4bfd-b9e5-04d8808398fa",
+      "title": "檸檬卷首張創作單曲《太空船生活》MV",
+      "thumbnail": "https://wiwi.video/lazy-static/thumbnails/54baef90-3d9c-4c6b-8a76-407125153c02.jpg",
+      "views": 669,
+      "published": "2022-05-31T07:36:51.317Z",
+      "author": "檸檬卷 Janet"
+    },
+    {
+      "id": "peertube:https://film.k-prod.fr/videos/watch/07ac3749-2437-4a8c-bf58-da700562f8a9",
+      "site": "peertube",
+      "url": "https://film.k-prod.fr/videos/watch/07ac3749-2437-4a8c-bf58-da700562f8a9",
+      "title": "« 心心相融 » (Xīn xīn xiāng róng) - The Love We Share / L’hymne officiel des Jeux Asiatiques de Hangzhou",
+      "thumbnail": "https://film.k-prod.fr/lazy-static/thumbnails/a074c820-d31f-49c2-8f8b-ff53bdb698aa.jpg",
+      "views": 7,
+      "published": "2025-08-27T09:46:49.637Z",
+      "author": "Chine - 中国"
+    },
+    {
+      "id": "peertube:https://810video.com/videos/watch/dcea3e75-2bc8-40f1-b38c-1bcbfea42a57",
+      "site": "peertube",
+      "url": "https://810video.com/videos/watch/dcea3e75-2bc8-40f1-b38c-1bcbfea42a57",
+      "title": "心を燃やすんだよ！この物語に出てくる炎柱みたいによぉ！",
+      "thumbnail": "https://810video.com/lazy-static/thumbnails/b5fdd9ed-b0bc-478d-b013-625c98e11dee.jpg",
+      "views": 3,
+      "published": "2025-02-24T11:33:36.214Z",
+      "author": "コメ付き保管"
+    },
+    {
+      "id": "peertube:https://fedimovie.com/videos/watch/dbf3409d-6f9a-47af-8a6d-376b612490a8",
+      "site": "peertube",
+      "url": "https://fedimovie.com/videos/watch/dbf3409d-6f9a-47af-8a6d-376b612490a8",
+      "title": "心字池",
+      "thumbnail": "https://fedimovie.com/lazy-static/thumbnails/de50f244-ad5e-4f74-98ef-1ed9feb961b3.jpg",
+      "views": 2,
+      "published": "2024-01-16T10:57:58.510Z",
+      "author": "flower e.t.c"
+    },
+    {
+      "id": "peertube:https://virtual-girls-are.definitely-for.me/videos/watch/5d34c8da-b555-4464-9fcc-fff2bf884385",
+      "site": "peertube",
+      "url": "https://virtual-girls-are.definitely-for.me/videos/watch/5d34c8da-b555-4464-9fcc-fff2bf884385",
+      "title": "心を込めて、演奏する",
+      "thumbnail": "https://virtual-girls-are.definitely-for.me/lazy-static/thumbnails/1fa9dea8-8cee-4ded-91cc-df2d3b638c0d.jpg",
+      "views": 0,
+      "published": "2025-08-02T05:14:16.595Z",
+      "author": "youtube视频搬运"
+    },
+    {
+      "id": "peertube:https://wiwi.video/videos/watch/9bef761d-0a3f-4295-9665-aad4e9135cca",
+      "site": "peertube",
+      "url": "https://wiwi.video/videos/watch/9bef761d-0a3f-4295-9665-aad4e9135cca",
+      "title": "【音樂科普】為什麼傷心的人要聽慢歌？檸檬卷失戀時聽什麼歌？",
+      "thumbnail": "https://wiwi.video/lazy-static/thumbnails/556a678b-b79c-42dd-9e18-8197b02e4b05.jpg",
+      "views": 31,
+      "published": "2019-01-16T00:00:00.000Z",
+      "author": "檸檬卷 Janet"
+    },
+    {
+      "id": "peertube:https://810video.com/videos/watch/ac044efc-04e7-4085-ba77-0775980e3374",
+      "site": "peertube",
+      "url": "https://810video.com/videos/watch/ac044efc-04e7-4085-ba77-0775980e3374",
+      "title": "戊心融解☆.mp4",
+      "thumbnail": "https://810video.com/lazy-static/thumbnails/85e71f0d-2c06-4dc2-a648-c93a78688fde.jpg",
+      "views": 12,
+      "published": "2026-08-14T04:17:52.063Z",
+      "author": "淫ク☆(その他)転載チャンネル"
+    },
+    {
+      "id": "peertube:https://810video.com/videos/watch/5a2bb343-559f-4e96-9c70-421eed44a008",
+      "site": "peertube",
+      "url": "https://810video.com/videos/watch/5a2bb343-559f-4e96-9c70-421eed44a008",
+      "title": "亘心綜合音楽事務所、けんま民を撃退して死亡",
+      "thumbnail": "https://810video.com/lazy-static/thumbnails/4b0d418e-f402-4946-9795-72c64060ff55.jpg",
+      "views": 9,
+      "published": "2025-01-30T21:12:36.580Z",
+      "author": "見て恒門"
+    },
+    {
+      "id": "peertube:https://peertube.nadeko.net/videos/watch/09519677-a779-4d13-83c2-913d055a65f0",
+      "site": "peertube",
+      "url": "https://peertube.nadeko.net/videos/watch/09519677-a779-4d13-83c2-913d055a65f0",
+      "title": "炉心融解 feat.鏡音リン  ⧸  Meltdown feat.Kagamine Rin",
+      "thumbnail": "https://peertube.nadeko.net/lazy-static/thumbnails/77214956-38a4-430f-b295-12542e86963d.jpg",
+      "views": 8,
+      "published": "2026-03-01T18:37:00.939Z",
+      "author": "【Vocaloid】【UTAU】【SynthV】"
+    },
+    {
+      "id": "peertube:https://videos.danksquad.org/videos/watch/50214d54-3ac5-4a33-afab-2403eea1c58a",
+      "site": "peertube",
+      "url": "https://videos.danksquad.org/videos/watch/50214d54-3ac5-4a33-afab-2403eea1c58a",
+      "title": "紙・心・ぺン・心 -SHISHINPENSHIN-",
+      "thumbnail": "https://videos.danksquad.org/lazy-static/thumbnails/3b70ce06-8c39-4f9c-9060-28626d4c551a.jpg",
+      "views": 5,
+      "published": "2022-05-03T13:56:29.103Z",
+      "author": "idolmaster"
+    },
+    {
+      "id": "peertube:https://videos.danksquad.org/videos/watch/16c1d296-18e1-4fdb-9942-c4cd8a5f295e",
+      "site": "peertube",
+      "url": "https://videos.danksquad.org/videos/watch/16c1d296-18e1-4fdb-9942-c4cd8a5f295e",
+      "title": "4K HDR「紙・心・ペン・心 -SHISHINPENSHIN-」(SHS 如月千早)【ミリシタ/MLTD MV】",
+      "thumbnail": "https://videos.danksquad.org/lazy-static/thumbnails/9fe54ee6-792b-433f-95f3-e7324837842c.jpg",
+      "views": 5,
+      "published": "2022-04-19T03:39:10.972Z",
+      "author": "idolmaster"
+    },
+    {
+      "id": "peertube:https://prtb.komaniya.work/videos/watch/4d909f62-1907-45ad-8632-d5d1b1d29cc4",
+      "site": "peertube",
+      "url": "https://prtb.komaniya.work/videos/watch/4d909f62-1907-45ad-8632-d5d1b1d29cc4",
+      "title": "【初心者】PWMでスピーカーを鳴らしてみる！【ラズパイ】",
+      "thumbnail": "https://prtb.komaniya.work/lazy-static/thumbnails/a7fe1f5c-ad3d-4120-b16d-a49f86354d88.jpg",
+      "views": 2,
+      "published": "2025-03-19T10:11:57.410Z",
+      "author": "かもしか"
+    },
+    {
+      "id": "peertube:https://prtb.komaniya.work/videos/watch/5aa99f8b-c5d0-4c47-915a-df8c18ed3a9d",
+      "site": "peertube",
+      "url": "https://prtb.komaniya.work/videos/watch/5aa99f8b-c5d0-4c47-915a-df8c18ed3a9d",
+      "title": "【初心者】RaspberryPiPico+ダイソーのライトでフットデバイス作成【ラズパイピコwithCircuitPython】",
+      "thumbnail": "https://prtb.komaniya.work/lazy-static/thumbnails/8252dfd6-d0b8-4eac-861d-71e9434e37f2.jpg",
+      "views": 2,
+      "published": "2025-03-18T21:37:21.557Z",
+      "author": "かもしか"
+    },
+    {
+      "id": "peertube:https://peertube.nodja.com/videos/watch/b2157d9c-010c-4e60-9b33-08e7d44b31d0",
+      "site": "peertube",
+      "url": "https://peertube.nodja.com/videos/watch/b2157d9c-010c-4e60-9b33-08e7d44b31d0",
+      "title": "[Ghost Trick #1] Danganronpa Zero",
+      "thumbnail": "https://peertube.nodja.com/lazy-static/thumbnails/d393098a-3d1b-4afe-a43b-693ce57c980d.jpg",
+      "views": 1506,
+      "published": "2023-07-13T21:42:57.865Z",
+      "author": "Joe Stream Backup (Unofficial)"
+    },
+    {
+      "id": "peertube:https://peertube.nodja.com/videos/watch/393c70c7-ac56-48af-9817-44d5adb75f6b",
+      "site": "peertube",
+      "url": "https://peertube.nodja.com/videos/watch/393c70c7-ac56-48af-9817-44d5adb75f6b",
+      "title": "[Ghost Trick #2] A Game At Least As Good As Xenoblade Chronicles 2",
+      "thumbnail": "https://peertube.nodja.com/lazy-static/thumbnails/76947dc6-bc65-4b76-9dfa-67dfad8d68c4.jpg",
+      "views": 923,
+      "published": "2023-07-14T11:00:00.409Z",
+      "author": "Joe Stream Backup (Unofficial)"
+    },
+    {
+      "id": "peertube:https://peertube.nodja.com/videos/watch/36bf3522-2e85-4b78-ae43-423569cc7078",
+      "site": "peertube",
+      "url": "https://peertube.nodja.com/videos/watch/36bf3522-2e85-4b78-ae43-423569cc7078",
+      "title": "[Ghost Trick #3] Ghost Trick the mouse to Ghost Click on this stream",
+      "thumbnail": "https://peertube.nodja.com/lazy-static/thumbnails/d7fcef40-dc2d-40ad-bd54-496b58b2b396.jpg",
+      "views": 764,
+      "published": "2023-07-16T04:36:55.471Z",
+      "author": "Joe Stream Backup (Unofficial)"
+    },
+    {
+      "id": "peertube:https://peertube.nodja.com/videos/watch/c8cd8a89-e730-4aac-9bc5-a81ef1f6f679",
+      "site": "peertube",
+      "url": "https://peertube.nodja.com/videos/watch/c8cd8a89-e730-4aac-9bc5-a81ef1f6f679",
+      "title": "[Ghost Trick #4] And for my final trick...",
+      "thumbnail": "https://peertube.nodja.com/lazy-static/thumbnails/6e09dac0-448f-49d4-9600-eeb360b0c381.jpg",
+      "views": 684,
+      "published": "2023-07-19T08:37:16.648Z",
+      "author": "Joe Stream Backup (Unofficial)"
+    },
+    {
+      "id": "peertube:https://www.pony.tube/videos/watch/00f7a94d-f42e-4175-9d55-bef184da0101",
+      "site": "peertube",
+      "url": "https://www.pony.tube/videos/watch/00f7a94d-f42e-4175-9d55-bef184da0101",
+      "title": "Ghost watches the G5 movie",
+      "thumbnail": "https://www.pony.tube/lazy-static/thumbnails/d8c23bc2-c939-49c7-8810-6b116480edda.jpg",
+      "views": 327,
+      "published": "2022-10-17T04:25:38.416Z",
+      "author": "Pony Archive"
+    },
+    {
+      "id": "peertube:https://tilvids.com/videos/watch/4ffd1e73-9719-417e-9218-3f5bcf954266",
+      "site": "peertube",
+      "url": "https://tilvids.com/videos/watch/4ffd1e73-9719-417e-9218-3f5bcf954266",
+      "title": "Ghost in the Shell (1995) An Anime Classic",
+      "thumbnail": "https://tilvids.com/lazy-static/thumbnails/2452c305-f2e5-4bc3-8a47-b62186850ccf.jpg",
+      "views": 259,
+      "published": "2021-01-10T15:19:19.479Z",
+      "author": "Main playcontent channel"
+    },
+    {
+      "id": "peertube:https://www.pony.tube/videos/watch/1a84c8b4-1c75-435a-ba7d-ed3128851f63",
+      "site": "peertube",
+      "url": "https://www.pony.tube/videos/watch/1a84c8b4-1c75-435a-ba7d-ed3128851f63",
+      "title": "Ghost's Trial (MLP Splice from The Ghost Show #465)",
+      "thumbnail": "https://www.pony.tube/lazy-static/thumbnails/f85893de-6225-4fc7-a14c-a950e01bd2ce.jpg",
+      "views": 245,
+      "published": "2025-10-14T13:40:02.910Z",
+      "author": "Pinkie Anon"
+    },
+    {
+      "id": "peertube:https://www.pony.tube/videos/watch/ce3e448d-a34e-4e34-9ab6-b708cef351dc",
+      "site": "peertube",
+      "url": "https://www.pony.tube/videos/watch/ce3e448d-a34e-4e34-9ab6-b708cef351dc",
+      "title": "Gmares has a question for ghost 1/31/26",
+      "thumbnail": "https://www.pony.tube/lazy-static/thumbnails/dcb40dc0-0bb7-4de2-b861-36993087aaf2.jpg",
+      "views": 95,
+      "published": "2026-01-31T06:14:07.488Z",
+      "author": "mlpgmodserverarchive"
+    },
+    {
+      "id": "peertube:https://www.pony.tube/videos/watch/1aeb0020-2854-427f-a133-8d5ad754b8ff",
+      "site": "peertube",
+      "url": "https://www.pony.tube/videos/watch/1aeb0020-2854-427f-a133-8d5ad754b8ff",
+      "title": "Ghost watches Brony Pony Kino (from The Ghost Show #501)",
+      "thumbnail": "https://www.pony.tube/lazy-static/thumbnails/d0112b3e-4fd4-4882-b530-2499621943a7.jpg",
+      "views": 89,
+      "published": "2026-01-28T15:45:54.645Z",
+      "author": "Pinkie Anon"
+    },
+    {
+      "id": "peertube:https://lostpod.space/videos/watch/1678d1bf-984b-4d6a-82e0-e94f47a1b30a",
+      "site": "peertube",
+      "url": "https://lostpod.space/videos/watch/1678d1bf-984b-4d6a-82e0-e94f47a1b30a",
+      "title": "Ghost Train Stations Of Lebanon 🇱🇧 - (Urban Exploration) Urbex & Abandoned Places",
+      "thumbnail": "https://lostpod.space/lazy-static/thumbnails/c9ece0a2-cc1f-4f30-afb8-173deda5e235.jpg",
+      "views": 75,
+      "published": "2024-10-02T09:16:54.652Z",
+      "author": "Obsidian Urbex - Abandoned Places Videos"
+    },
+    {
+      "id": "peertube:https://tube-sciences-technologies.apps.education.fr/videos/watch/8911a426-8543-4ba6-8c28-9bb96f277c0e",
+      "site": "peertube",
+      "url": "https://tube-sciences-technologies.apps.education.fr/videos/watch/8911a426-8543-4ba6-8c28-9bb96f277c0e",
+      "title": "GHOST BOOSTE AIR",
+      "thumbnail": "https://tube-sciences-technologies.apps.education.fr/lazy-static/thumbnails/b8a35583-0408-4f57-a350-31bd03d02268.jpg",
+      "views": 70,
+      "published": "2024-10-17T15:49:48.323Z",
+      "author": "LPO René Char Avignon"
+    },
+    {
+      "id": "peertube:https://www.pony.tube/videos/watch/6b7f65b7-46e6-4275-a063-1da2d1ff03fb",
+      "site": "peertube",
+      "url": "https://www.pony.tube/videos/watch/6b7f65b7-46e6-4275-a063-1da2d1ff03fb",
+      "title": "Ghost watches Anonfilly animation (from The Ghost Show #502)",
+      "thumbnail": "https://www.pony.tube/lazy-static/thumbnails/83c3934f-29ff-4a32-b440-d013cdf6a44d.jpg",
+      "views": 63,
+      "published": "2026-01-31T23:36:17.849Z",
+      "author": "Pinkie Anon"
+    },
+    {
+      "id": "peertube:https://toobnix.org/videos/watch/4a8ca7c0-cf43-4337-a3ed-584d91c041fc",
+      "site": "peertube",
+      "url": "https://toobnix.org/videos/watch/4a8ca7c0-cf43-4337-a3ed-584d91c041fc",
+      "title": "Ghost into the Fog by Red Martian - Wax Cylinder Edison Model D",
+      "thumbnail": "https://toobnix.org/lazy-static/thumbnails/f224a0b1-36a4-458f-888c-909ed9a2c2e9.jpg",
+      "views": 58,
+      "published": "2019-03-18T03:04:53.183Z",
+      "author": "random"
+    },
+    {
+      "id": "peertube:https://video.snug.moe/videos/watch/30eb1d0e-5903-450a-b6c2-99f7eca8474f",
+      "site": "peertube",
+      "url": "https://video.snug.moe/videos/watch/30eb1d0e-5903-450a-b6c2-99f7eca8474f",
+      "title": "Ghost \"Cirice\" -Solo only (Guitar cover)",
+      "thumbnail": "https://video.snug.moe/lazy-static/thumbnails/596d6bc7-a743-40fa-a214-169914ca82df.jpg",
+      "views": 57,
+      "published": "2022-09-23T14:35:38.536Z",
+      "author": "Rise's vids"
+    },
+    {
+      "id": "peertube:https://peertube.linuxrocks.online/videos/watch/d3c4a6e1-69ce-46cd-b592-3d05be6191d8",
+      "site": "peertube",
+      "url": "https://peertube.linuxrocks.online/videos/watch/d3c4a6e1-69ce-46cd-b592-3d05be6191d8",
+      "title": "Ghost of Tsushima | 1080p High XeSS Q | RX6600 | Linux",
+      "thumbnail": "https://peertube.linuxrocks.online/lazy-static/thumbnails/eb54f3d1-c8d7-4498-a40b-01352aa6d89b.jpg",
+      "views": 54,
+      "published": "2024-05-20T10:48:49.220Z",
+      "author": "LinuxBenchmark"
+    },
+    {
+      "id": "peertube:https://peertube.futo.org/videos/watch/20db5106-90a9-4c5a-9fb1-31a08b63a664",
+      "site": "peertube",
+      "url": "https://peertube.futo.org/videos/watch/20db5106-90a9-4c5a-9fb1-31a08b63a664",
+      "title": "Ghost Keys and Cypherpunk Reputation Systems w/ Ian Clarke of Freenet",
+      "thumbnail": "https://peertube.futo.org/lazy-static/thumbnails/adc15c41-f363-46d4-84af-6de750a8cc9a.jpg",
+      "views": 47,
+      "published": "2024-10-17T00:51:44.045Z",
+      "author": "FUTO"
+    },
+    {
+      "id": "peertube:https://peertube.uno/videos/watch/d16cf551-ab27-4fa8-8aab-fbbe1cf64e02",
+      "site": "peertube",
+      "url": "https://peertube.uno/videos/watch/d16cf551-ab27-4fa8-8aab-fbbe1cf64e02",
+      "title": "Ghost - Unchained melody (scena della creta)",
+      "thumbnail": "https://peertube.uno/lazy-static/thumbnails/5a9e6274-03d7-4688-9a11-d99b3c801a89.jpg",
+      "views": 45,
+      "published": "2021-12-14T21:12:54.990Z",
+      "author": "didattica_giusti"
+    },
+    {
+      "id": "peertube:https://makertube.net/videos/watch/f861a289-9788-4e40-b168-040c3df736d2",
+      "site": "peertube",
+      "url": "https://makertube.net/videos/watch/f861a289-9788-4e40-b168-040c3df736d2",
+      "title": "Ghost trap and demon dog",
+      "thumbnail": "https://makertube.net/lazy-static/thumbnails/c6d13ccc-9a0f-494d-ab39-829d48f96787.jpg",
+      "views": 40,
+      "published": "2023-10-18T03:18:11.882Z",
+      "author": "Gullickson Laboratories "
+    },
+    {
+      "id": "peertube:https://makertube.net/videos/watch/0d0e5975-cbfe-4f21-a9bf-b3569ceed064",
+      "site": "peertube",
+      "url": "https://makertube.net/videos/watch/0d0e5975-cbfe-4f21-a9bf-b3569ceed064",
+      "title": "Ghost Town [Cover] - Live beim Acker-Kult-Festival 2024",
+      "thumbnail": "https://makertube.net/lazy-static/thumbnails/7aa93533-da4e-4fad-8387-4469d030e967.jpg",
+      "views": 34,
+      "published": "2026-01-01T13:27:57.869Z",
+      "author": "Uplifters Musik"
+    },
+    {
+      "id": "peertube:https://spook.tube/videos/watch/85675a5b-cffd-4b00-ab2c-92710466cd03",
+      "site": "peertube",
+      "url": "https://spook.tube/videos/watch/85675a5b-cffd-4b00-ab2c-92710466cd03",
+      "title": "Ghost knife guy is near",
+      "thumbnail": "https://spook.tube/lazy-static/thumbnails/aed8777a-a17a-4ece-af94-597c2082730a.jpg",
+      "views": 30,
+      "published": "2024-04-18T19:43:49.411Z",
+      "author": "MrFloppy"
+    },
+    {
+      "id": "peertube:https://spectra.video/videos/watch/97257646-0aa5-45ec-a104-6ef0eb9aa248",
+      "site": "peertube",
+      "url": "https://spectra.video/videos/watch/97257646-0aa5-45ec-a104-6ef0eb9aa248",
+      "title": "FANTASMA do ANO [ GHOST of the YEAR LEGENDADO Português Brasileiro ]",
+      "thumbnail": "https://spectra.video/lazy-static/thumbnails/b944f9dd-e7ad-481c-9e37-9733bc0dcbc6.png",
+      "views": 6,
+      "published": "2025-12-25T23:26:22.380Z",
+      "author": "BILINGUADO"
+    },
+    {
+      "id": "peertube:https://bolha.tube/videos/watch/edbed3d4-9a4e-4608-954e-7ba9a4984821",
+      "site": "peertube",
+      "url": "https://bolha.tube/videos/watch/edbed3d4-9a4e-4608-954e-7ba9a4984821",
+      "title": "FANTASMA do ANO [ GHOST of the YEAR LEGENDADO Português Brasileiro ]",
+      "thumbnail": "https://bolha.tube/lazy-static/thumbnails/adaccfb7-f373-43ef-b9bd-86d67b778fa9.png",
+      "views": 3,
+      "published": "2025-12-26T19:45:05.373Z",
+      "author": "BILINGUADO"
+    },
+    {
+      "id": "peertube:https://spook.tube/videos/watch/20bcd746-6c66-4441-82ed-01068ff8fcb4",
+      "site": "peertube",
+      "url": "https://spook.tube/videos/watch/20bcd746-6c66-4441-82ed-01068ff8fcb4",
+      "title": "El fantasma volador y el caracol violador",
+      "thumbnail": "https://spook.tube/lazy-static/thumbnails/c7ded979-1f5c-4e60-8f11-e65bc28876af.jpg",
+      "views": 6,
+      "published": "2024-04-27T07:48:39.823Z",
+      "author": "SePiTa"
+    },
+    {
+      "id": "peertube:https://clip.place/videos/watch/b7cff36b-615b-4940-be29-095a70bab3a2",
+      "site": "peertube",
+      "url": "https://clip.place/videos/watch/b7cff36b-615b-4940-be29-095a70bab3a2",
+      "title": "Puebla Fantasma",
+      "thumbnail": "https://clip.place/lazy-static/thumbnails/fe394ff3-0304-483d-a36d-463ddc7b22c0.jpg",
+      "views": 4,
+      "published": "2026-05-19T22:06:53.832Z",
+      "author": "Impressionen"
+    },
+    {
+      "id": "peertube:https://tube.ar.hn/videos/watch/184a484a-4d2a-4324-a353-c896ca17a360",
+      "site": "peertube",
+      "url": "https://tube.ar.hn/videos/watch/184a484a-4d2a-4324-a353-c896ca17a360",
+      "title": "Il Fantasma dell’opera (Upiór w operze, 1998) – Najlepsze złe filmy #2",
+      "thumbnail": "https://tube.ar.hn/lazy-static/thumbnails/1d35c9f9-de00-4baf-acb8-fed889858751.jpg",
+      "views": 0,
+      "published": "2021-02-13T00:00:00.000Z",
+      "author": "Łukasz Stelmach"
+    },
+    {
+      "id": "peertube:https://www.pony.tube/videos/watch/49283c51-9d94-427c-b9cc-40ada2c3d430",
+      "site": "peertube",
+      "url": "https://www.pony.tube/videos/watch/49283c51-9d94-427c-b9cc-40ada2c3d430",
+      "title": "My Little Pony (1986-1987) Capitulo 11 - El fantasma de la finca Paradise (1) Español Latino",
+      "thumbnail": "https://www.pony.tube/lazy-static/thumbnails/e69b033b-d95e-4547-9fd1-49fc18c1f94a.jpg",
+      "views": 18,
+      "published": "2026-08-03T19:09:29.067Z",
+      "author": "MyLittlePonySeriesTv"
+    },
+    {
+      "id": "peertube:https://fediverse.tv/videos/watch/32858b95-49b0-40ff-bf76-cb4c04a30df3",
+      "site": "peertube",
+      "url": "https://fediverse.tv/videos/watch/32858b95-49b0-40ff-bf76-cb4c04a30df3",
+      "title": "Bitcoin: El fantasma en la máquina.",
+      "thumbnail": "https://fediverse.tv/lazy-static/thumbnails/bde19d75-4296-47d8-86c1-f9b73be9666b.jpg",
+      "views": 14,
+      "published": "2026-05-13T18:57:37.814Z",
+      "author": "YerkoBits"
+    },
+    {
+      "id": "peertube:https://video.hardlimit.com/videos/watch/3d2ff66e-c52f-42d2-8627-52ee795a7b90",
+      "site": "peertube",
+      "url": "https://video.hardlimit.com/videos/watch/3d2ff66e-c52f-42d2-8627-52ee795a7b90",
+      "title": "El espartano fantasma (Assassin's Creed Odyssey)",
+      "thumbnail": "https://video.hardlimit.com/lazy-static/thumbnails/fe2fdf58-e243-4d78-a525-fdab05fcde39.jpg",
+      "views": 14,
+      "published": "2021-06-08T16:51:50.498Z",
+      "author": "parajuego | ᵽɐrajüəɢ0"
+    },
+    {
+      "id": "peertube:https://peertube.uno/videos/watch/0dc2c213-f43c-4c89-adea-5978c95ff19e",
+      "site": "peertube",
+      "url": "https://peertube.uno/videos/watch/0dc2c213-f43c-4c89-adea-5978c95ff19e",
+      "title": "Linea 77 - Fantasma",
+      "thumbnail": "https://peertube.uno/lazy-static/thumbnails/fcf1572a-eccb-4781-8981-f20c6f8642ff.jpg",
+      "views": 4,
+      "published": "2021-12-15T15:55:01.819Z",
+      "author": "Jack Roses "
+    },
+    {
+      "id": "peertube:https://peertube.uno/videos/watch/40ed57e9-a012-4574-8c17-1117a1d09fd0",
+      "site": "peertube",
+      "url": "https://peertube.uno/videos/watch/40ed57e9-a012-4574-8c17-1117a1d09fd0",
+      "title": "Linea 77 - Fantasma",
+      "thumbnail": "https://peertube.uno/lazy-static/thumbnails/8792dbdf-76c8-4845-a351-8342eb4e95b9.jpg",
+      "views": 3,
+      "published": "2021-12-13T07:46:39.357Z",
+      "author": "Jack Roses "
+    },
+    {
+      "id": "peertube:https://peertube.linuxrocks.online/videos/watch/98b213b7-5580-414c-b075-fd8d3b534420",
+      "site": "peertube",
+      "url": "https://peertube.linuxrocks.online/videos/watch/98b213b7-5580-414c-b075-fd8d3b534420",
+      "title": "[GHOSTLY VESSEL/Navio Fantasma]",
+      "thumbnail": "https://peertube.linuxrocks.online/lazy-static/thumbnails/ecab8350-c944-4f0a-9572-c93bd738b85d.jpg",
+      "views": 1,
+      "published": "2024-05-08T00:27:05.195Z",
+      "author": "dumpster Productions Linux Gaming"
+    },
+    {
+      "id": "peertube:https://play.cotv.org.br/videos/watch/d0c7ab05-1dbd-4cdb-9a34-c89f16123dfb",
+      "site": "peertube",
+      "url": "https://play.cotv.org.br/videos/watch/d0c7ab05-1dbd-4cdb-9a34-c89f16123dfb",
+      "title": "Não aos jogos-fantasma e às demissões, que os patrões paguem pela crise - Na Zona do Agrião nº 111",
+      "thumbnail": "https://play.cotv.org.br/lazy-static/thumbnails/bbec9ff0-6ac1-4e36-858b-c0d4ca7535e6.jpg",
+      "views": 0,
+      "published": "2024-08-02T10:57:53.064Z",
+      "author": "COTV - Causa Operária TV"
+    },
+    {
+      "id": "peertube:https://play.cotv.org.br/videos/watch/ecc1e1b6-7173-440b-95d2-f14426cfed6c",
+      "site": "peertube",
+      "url": "https://play.cotv.org.br/videos/watch/ecc1e1b6-7173-440b-95d2-f14426cfed6c",
+      "title": "Colunistas da COTV: O fantasma de Marx ainda ronda a Europa, por Rafael Dantas",
+      "thumbnail": "https://play.cotv.org.br/lazy-static/thumbnails/d67d3ca4-259f-417d-ad76-fa793ebfb9bd.jpg",
+      "views": 0,
+      "published": "2024-08-02T10:57:28.027Z",
+      "author": "COTV - Causa Operária TV"
+    },
+    {
+      "id": "peertube:https://play.cotv.org.br/videos/watch/e20c20a3-8ad7-4e9b-ab42-eac1aa95339f",
+      "site": "peertube",
+      "url": "https://play.cotv.org.br/videos/watch/e20c20a3-8ad7-4e9b-ab42-eac1aa95339f",
+      "title": "Imperialismo usa o fantasma do \"fascismo\" para aprovar leis antidemocráticas | Momentos",
+      "thumbnail": "https://play.cotv.org.br/lazy-static/thumbnails/a158e276-395f-40f9-a91a-2443f794e8a5.jpg",
+      "views": 0,
+      "published": "2024-08-02T10:53:12.766Z",
+      "author": "Cortes da COTV"
+    },
+    {
+      "id": "peertube:https://player.ojamajo.moe/videos/watch/9b373404-6e98-4661-a49d-d361cd911e5e",
+      "site": "peertube",
+      "url": "https://player.ojamajo.moe/videos/watch/9b373404-6e98-4661-a49d-d361cd911e5e",
+      "title": "01x30 – Quiero encontrarme con el fantasma",
+      "thumbnail": "https://player.ojamajo.moe/lazy-static/thumbnails/9b373404-6e98-4661-a49d-d361cd911e5e.jpg",
+      "views": 17364,
+      "published": "2021-04-17T12:02:34.879Z",
+      "author": "Doremi Español España"
+    },
+    {
+      "id": "peertube:https://www.pony.tube/videos/watch/5871ae39-1cfc-41a1-ba5f-21c8fe688668",
+      "site": "peertube",
+      "url": "https://www.pony.tube/videos/watch/5871ae39-1cfc-41a1-ba5f-21c8fe688668",
+      "title": "Meu Querido Pônei Geração 1 [T01E11~14] - O Fantasma da Fazenda Paraíso",
+      "thumbnail": "https://www.pony.tube/lazy-static/thumbnails/d78552cf-afcb-4d81-93d7-a6d25af94694.jpg",
+      "views": 192,
+      "published": "2024-09-01T06:38:03.101Z",
+      "author": "New MLP Brasil"
+    },
+    {
+      "id": "peertube:https://video.anartist.org/videos/watch/f62bc4dd-ea6b-4345-a318-32d1228ee24b",
+      "site": "peertube",
+      "url": "https://video.anartist.org/videos/watch/f62bc4dd-ea6b-4345-a318-32d1228ee24b",
+      "title": "«Brevíssima crònica de l'opressió colonial (El fantasma de Moctezuma)» - Adrià Mor (Cançó urgent) [SUBS CA/EN]",
+      "thumbnail": "https://video.anartist.org/lazy-static/thumbnails/d7558837-2cfa-4f9b-a8b9-498acbe3c806.jpg",
+      "views": 21,
+      "published": "2024-09-20T15:00:56.295Z",
+      "author": "adriamusic_canal"
+    },
+    {
+      "id": "peertube:https://video.hardlimit.com/videos/watch/30b9441f-02c5-45d1-9391-8647e0259f65",
+      "site": "peertube",
+      "url": "https://video.hardlimit.com/videos/watch/30b9441f-02c5-45d1-9391-8647e0259f65",
+      "title": "TERROR INDONESIO EN UN PUEBLO FANTASMA | DREADOUT (demo) (gameplay en español)  - Juego de terror -",
+      "thumbnail": "https://video.hardlimit.com/lazy-static/thumbnails/a9379f8c-9a50-4d6b-af2f-c88cf27c6229.jpg",
+      "views": 15,
+      "published": "2025-05-29T10:36:48.449Z",
+      "author": "siren_in_the_distance"
+    },
+    {
+      "id": "peertube:https://player.ojamajo.moe/videos/watch/4210607e-fcd5-4f44-bf87-d2b5c9688e37",
+      "site": "peertube",
+      "url": "https://player.ojamajo.moe/videos/watch/4210607e-fcd5-4f44-bf87-d2b5c9688e37",
+      "title": "Magical Doremi | 30 | Quero conhecer um fantasma",
+      "thumbnail": "https://player.ojamajo.moe/lazy-static/thumbnails/c3b5c9ac-f1fd-4c6e-b575-770448cb7daf.jpg",
+      "views": 4224,
+      "published": "2021-09-13T08:29:40.505Z",
+      "author": "Magical Doremi português"
+    },
+    {
+      "id": "peertube:https://player.ojamajo.moe/videos/watch/652486f6-c12d-401c-8ced-20bfb002d9d0",
+      "site": "peertube",
+      "url": "https://player.ojamajo.moe/videos/watch/652486f6-c12d-401c-8ced-20bfb002d9d0",
+      "title": "Magical Doremi III | 29 | Que medo o feitiço do fantasma",
+      "thumbnail": "https://player.ojamajo.moe/lazy-static/thumbnails/76cd5df2-080d-4f30-8b32-114a11b87f32.jpg",
+      "views": 2428,
+      "published": "2021-09-24T07:31:42.565Z",
+      "author": "Magical Doremi português"
+    },
+    {
+      "id": "peertube:https://tube-cycle-2.apps.education.fr/videos/watch/9ea777ab-f2c5-440d-8355-587a087be2a4",
+      "site": "peertube",
+      "url": "https://tube-cycle-2.apps.education.fr/videos/watch/9ea777ab-f2c5-440d-8355-587a087be2a4",
+      "title": "LE COUP DU FANTOME (2013)",
+      "thumbnail": "https://tube-cycle-2.apps.education.fr/lazy-static/thumbnails/bc4b0425-f6b1-42e7-91e3-26a65ed80486.jpg",
+      "views": 0,
+      "published": "2025-12-09T13:58:35.112Z",
+      "author": "VISITES FILMEES UPE2A"
+    },
+    {
+      "id": "peertube:https://indymotion.fr/videos/watch/50f75aab-95fc-4708-a1a0-0f1b7a304865",
+      "site": "peertube",
+      "url": "https://indymotion.fr/videos/watch/50f75aab-95fc-4708-a1a0-0f1b7a304865",
+      "title": "PICTURES • Hebdo 16/18 • Aquarium ciné-café • S9",
+      "thumbnail": "https://indymotion.fr/lazy-static/thumbnails/656eb58b-7b98-4e28-b4c1-2dbdc93a4837.jpg",
+      "views": 0,
+      "published": "2026-09-08T14:57:25.751Z",
+      "author": "Ateliers Aquarium • Hebdo enfants et ados"
+    },
+    {
+      "id": "peertube:https://peertube.dc.pini.fr/videos/watch/33edcf03-1b17-4ace-8507-ea469496f7d6",
+      "site": "peertube",
+      "url": "https://peertube.dc.pini.fr/videos/watch/33edcf03-1b17-4ace-8507-ea469496f7d6",
+      "title": "Guerre fantôme : la vente d'Alstom à General Electric",
+      "thumbnail": "https://peertube.dc.pini.fr/lazy-static/thumbnails/96d79f52-4b5e-41b9-aebd-6788a58bc40c.jpg",
+      "views": 62,
+      "published": "2022-09-01T17:47:37.099Z",
+      "author": "quercus_robur"
+    },
+    {
+      "id": "peertube:https://indymotion.fr/videos/watch/b73bcb05-f1ba-42ea-a16e-27f673be24a5",
+      "site": "peertube",
+      "url": "https://indymotion.fr/videos/watch/b73bcb05-f1ba-42ea-a16e-27f673be24a5",
+      "title": "MONTAGNE FANTÔME • Mensuel Documentaire • Aquarium ciné-café • S10",
+      "thumbnail": "https://indymotion.fr/lazy-static/thumbnails/9b0d4579-ea45-4099-98d5-66842fe79856.jpg",
+      "views": 15,
+      "published": "2026-09-17T08:15:43.826Z",
+      "author": "Atelier Aquarium •  Adultes • S10"
+    },
+    {
+      "id": "peertube:https://tube-action-educative.apps.education.fr/videos/watch/a8bae73a-c020-4b89-b632-09b04eaaf034",
+      "site": "peertube",
+      "url": "https://tube-action-educative.apps.education.fr/videos/watch/a8bae73a-c020-4b89-b632-09b04eaaf034",
+      "title": "Le fantôme de la Maison Bélime",
+      "thumbnail": "https://tube-action-educative.apps.education.fr/lazy-static/thumbnails/db043fcd-3a6c-40b1-937b-7a1bbea7f3b8.jpg",
+      "views": 21,
+      "published": "2025-05-26T12:04:35.854Z",
+      "author": "François Bélime (1848-1870), un héros vittellien"
+    },
+    {
+      "id": "peertube:https://indymotion.fr/videos/watch/3991b3ec-298f-455a-8862-2fba14b77ffd",
+      "site": "peertube",
+      "url": "https://indymotion.fr/videos/watch/3991b3ec-298f-455a-8862-2fba14b77ffd",
+      "title": "MON AMIE CHARLIE • Hebdo 8/11 • Aquarium ciné-café • S10",
+      "thumbnail": "https://indymotion.fr/lazy-static/thumbnails/3bb1b82d-1217-4731-93b6-2453fb67bfe1.png",
+      "views": 5,
+      "published": "2026-05-27T09:53:23.053Z",
+      "author": "Ateliers Aquarium • Hebdo enfants et ados"
+    },
+    {
+      "id": "peertube:https://video.antopie.org/videos/watch/aebf9fb6-b49b-45c1-9713-fae956d211bc",
+      "site": "peertube",
+      "url": "https://video.antopie.org/videos/watch/aebf9fb6-b49b-45c1-9713-fae956d211bc",
+      "title": "René Binamé - La vie s'écoule",
+      "thumbnail": "https://video.antopie.org/lazy-static/thumbnails/098bc38b-633f-46ec-8de7-55bd48df794c.jpg",
+      "views": 16,
+      "published": "2020-11-22T11:32:50.214Z",
+      "author": "Pour les Oreilles"
+    },
+    {
+      "id": "peertube:https://tube-action-educative.apps.education.fr/videos/watch/f4c250e9-a0f6-4bac-b102-e51fc0e3604f",
+      "site": "peertube",
+      "url": "https://tube-action-educative.apps.education.fr/videos/watch/f4c250e9-a0f6-4bac-b102-e51fc0e3604f",
+      "title": "les_fantômes_d'auschwitz_version_finale (1080p)",
+      "thumbnail": "https://tube-action-educative.apps.education.fr/lazy-static/thumbnails/be1d1dcc-15f8-400b-a3cf-2fb9b073498e.jpg",
+      "views": 6,
+      "published": "2023-11-28T11:21:46.281Z",
+      "author": "CAV Montpellier "
+    },
+    {
+      "id": "peertube:https://video.audiovisuel-participatif.org/videos/watch/eabd84a2-4f5d-4a67-945a-1153a92cd36a",
+      "site": "peertube",
+      "url": "https://video.audiovisuel-participatif.org/videos/watch/eabd84a2-4f5d-4a67-945a-1153a92cd36a",
+      "title": "66 traverse des Citrouilles",
+      "thumbnail": "https://video.audiovisuel-participatif.org/lazy-static/thumbnails/448d80d5-8e31-4dbb-8105-3fd92a979059.jpg",
+      "views": 31,
+      "published": "2022-03-02T19:07:17.771Z",
+      "author": "Télé Mouche - Ateliers"
+    },
+    {
+      "id": "peertube:https://tube-numerique-educatif.apps.education.fr/videos/watch/6fd2926f-8347-49bf-8b0a-aca3aa4375df",
+      "site": "peertube",
+      "url": "https://tube-numerique-educatif.apps.education.fr/videos/watch/6fd2926f-8347-49bf-8b0a-aca3aa4375df",
+      "title": "fantome",
+      "thumbnail": "https://tube-numerique-educatif.apps.education.fr/lazy-static/thumbnails/7b808068-1626-430e-9296-3bcd573f4ffe.jpg",
+      "views": 19,
+      "published": "2025-03-10T08:04:53.553Z",
+      "author": "Main guillaumedemesy channel"
+    },
+    {
+      "id": "peertube:https://tube.felinn.org/videos/watch/4c35e544-553e-4053-90e0-37bf241710a7",
+      "site": "peertube",
+      "url": "https://tube.felinn.org/videos/watch/4c35e544-553e-4053-90e0-37bf241710a7",
+      "title": "#Fantôme - captation intégrale - juin 2021 - théâtre de l'Élysée, Lyon",
+      "thumbnail": "https://tube.felinn.org/lazy-static/thumbnails/b1cea9e3-f97a-4161-acc5-03cb217c7a45.jpg",
+      "views": 14,
+      "published": "2021-10-27T07:42:41.072Z",
+      "author": "ballet_cosmique"
+    },
+    {
+      "id": "peertube:https://videos.pair2jeux.tube/videos/watch/2fc9e666-fcc8-4bfe-a3f9-cf39c1573dde",
+      "site": "peertube",
+      "url": "https://videos.pair2jeux.tube/videos/watch/2fc9e666-fcc8-4bfe-a3f9-cf39c1573dde",
+      "title": "Fantôme Apparent - Game Jam des Rendez-Vous de l'Histoire 2022",
+      "thumbnail": "https://videos.pair2jeux.tube/lazy-static/thumbnails/2f396688-3fe2-498c-a1d7-ec1067ee6cfd.jpg",
+      "views": 7,
+      "published": "2025-02-11T18:35:20.456Z",
+      "author": "La Science Entre En Jeu"
+    },
+    {
+      "id": "peertube:https://archive.hitness.club/videos/watch/27847f1f-989b-4906-af87-42cc9c0b0394",
+      "site": "peertube",
+      "url": "https://archive.hitness.club/videos/watch/27847f1f-989b-4906-af87-42cc9c0b0394",
+      "title": "Fantome Josepha (live @ TV Studio) 2023/10/26",
+      "thumbnail": "https://archive.hitness.club/lazy-static/thumbnails/10e9d602-5f55-464b-9521-2f48ee6bfdde.jpg",
+      "views": 0,
+      "published": "2025-06-24T14:56:26.210Z",
+      "author": "Live @ TV-Studio"
+    },
+    {
+      "id": "peertube:https://tube-action-educative.apps.education.fr/videos/watch/4df76ce1-ddc7-4a86-ba3b-05211f731666",
+      "site": "peertube",
+      "url": "https://tube-action-educative.apps.education.fr/videos/watch/4df76ce1-ddc7-4a86-ba3b-05211f731666",
+      "title": "Le Fantôme du Collège",
+      "thumbnail": "https://tube-action-educative.apps.education.fr/lazy-static/thumbnails/e1902d8e-2f1c-4ecf-8454-07a30cbfa35d.jpg",
+      "views": 322,
+      "published": "2023-02-28T17:17:23.456Z",
+      "author": "Main dovis_vanitha channel"
+    },
+    {
+      "id": "peertube:https://video.lavolte.net/videos/watch/e0f8d311-61ed-419f-88c7-0a373a5e0be9",
+      "site": "peertube",
+      "url": "https://video.lavolte.net/videos/watch/e0f8d311-61ed-419f-88c7-0a373a5e0be9",
+      "title": "Le Fantôme d'Eymerich : l'interview de Valerio Evangelisti",
+      "thumbnail": "https://video.lavolte.net/lazy-static/thumbnails/dfb557f1-9524-4c8c-b168-136734fa237b.jpg",
+      "views": 153,
+      "published": "2021-01-06T21:29:02.117Z",
+      "author": "Publications"
+    },
+    {
+      "id": "peertube:https://tube-action-educative.apps.education.fr/videos/watch/53aa8bb3-3cf3-45ea-a901-8a02a83595d9",
+      "site": "peertube",
+      "url": "https://tube-action-educative.apps.education.fr/videos/watch/53aa8bb3-3cf3-45ea-a901-8a02a83595d9",
+      "title": "Le fantôme de Daguerre",
+      "thumbnail": "https://tube-action-educative.apps.education.fr/lazy-static/thumbnails/3d412436-a597-465b-9972-71f327c0f17f.jpg",
+      "views": 112,
+      "published": "2022-07-09T08:13:13.330Z",
+      "author": "Julien Delmas"
+    },
+    {
+      "id": "peertube:https://tube-arts-lettres-sciences-humaines.apps.education.fr/videos/watch/a34b5d40-7958-462d-b252-50cdece0e718",
+      "site": "peertube",
+      "url": "https://tube-arts-lettres-sciences-humaines.apps.education.fr/videos/watch/a34b5d40-7958-462d-b252-50cdece0e718",
+      "title": "Le fantôme du laboratoire de sciences",
+      "thumbnail": "https://tube-arts-lettres-sciences-humaines.apps.education.fr/lazy-static/thumbnails/8d9e81f4-983f-4e71-a3e8-1d14f9c36933.jpg",
+      "views": 83,
+      "published": "2024-11-01T21:01:36.164Z",
+      "author": "Main garibal_vincent channel"
+    },
+    {
+      "id": "peertube:https://tube.felinn.org/videos/watch/f20b94cb-243b-4f2c-b779-8ad357dbf350",
+      "site": "peertube",
+      "url": "https://tube.felinn.org/videos/watch/f20b94cb-243b-4f2c-b779-8ad357dbf350",
+      "title": "Teaser - Fantome Juin 2021",
+      "thumbnail": "https://tube.felinn.org/lazy-static/thumbnails/853e5177-0a62-4ac4-9df0-ecae110f5adf.jpg",
+      "views": 67,
+      "published": "2021-09-29T11:55:30.371Z",
+      "author": "ballet_cosmique"
+    },
+    {
+      "id": "peertube:https://video.lavolte.net/videos/watch/664c4442-1b28-48ac-9a25-f98daca0e028",
+      "site": "peertube",
+      "url": "https://video.lavolte.net/videos/watch/664c4442-1b28-48ac-9a25-f98daca0e028",
+      "title": "Le fantôme d'Eymerich, de Valerio Evangelisti",
+      "thumbnail": "https://video.lavolte.net/lazy-static/thumbnails/1d78199c-acb9-4430-b5e4-7722b9b970a9.jpg",
+      "views": 55,
+      "published": "2021-01-05T10:39:49.282Z",
+      "author": "Publications"
+    },
+    {
+      "id": "peertube:https://tube-cycle-2.apps.education.fr/videos/watch/92c8600a-f25c-4765-bf7f-6fb5dfd6f65c",
+      "site": "peertube",
+      "url": "https://tube-cycle-2.apps.education.fr/videos/watch/92c8600a-f25c-4765-bf7f-6fb5dfd6f65c",
+      "title": "Le fantome de lOpera",
+      "thumbnail": "https://tube-cycle-2.apps.education.fr/lazy-static/thumbnails/1afabd73-6b12-4c57-8911-de4823b3a664.jpg",
+      "views": 47,
+      "published": "2024-03-04T16:04:01.382Z",
+      "author": "Le Homard Joyeux"
+    },
+    {
+      "id": "peertube:https://video.2bpencil.online/videos/watch/0dbfaa79-5b09-4a6d-b0b6-05171bb28fe7",
+      "site": "peertube",
+      "url": "https://video.2bpencil.online/videos/watch/0dbfaa79-5b09-4a6d-b0b6-05171bb28fe7",
+      "title": "대남방송소리 첫번째 라이브_20250227",
+      "thumbnail": "https://video.2bpencil.online/lazy-static/thumbnails/54132828-39d4-479d-980e-4d43fd7df66f.jpg",
+      "views": 34,
+      "published": "2025-06-26T10:16:40.078Z",
+      "author": "2bpencil"
+    },
+    {
+      "id": "peertube:https://video.2bpencil.online/videos/watch/ff0eb195-4ead-4f76-b36f-9930a8121683",
+      "site": "peertube",
+      "url": "https://video.2bpencil.online/videos/watch/ff0eb195-4ead-4f76-b36f-9930a8121683",
+      "title": "<라디오 월딩>  리스닝 룸 1 - 림윤, 배윤재, 오늘이, 철민, Pjeon",
+      "thumbnail": "https://video.2bpencil.online/lazy-static/thumbnails/fe0a13d4-31aa-49ad-8ba5-c75222dbff0d.jpg",
+      "views": 29,
+      "published": "2026-08-29T14:02:51.945Z",
+      "author": "2bpencil"
+    },
+    {
+      "id": "peertube:https://video.2bpencil.online/videos/watch/267e12e3-32de-4c24-a542-b0a03ffbe815",
+      "site": "peertube",
+      "url": "https://video.2bpencil.online/videos/watch/267e12e3-32de-4c24-a542-b0a03ffbe815",
+      "title": "<라디오 월딩> 리스닝 룸 2 - 구래연, 두호, 이안팎, 조상혁, 희주, 홍경진",
+      "thumbnail": "https://video.2bpencil.online/lazy-static/thumbnails/8e739840-2260-4bf6-9e25-9997f46b8f28.jpg",
+      "views": 12,
+      "published": "2026-09-09T07:15:56.941Z",
+      "author": "2bpencil"
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm17598437",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm17598437",
+      "title": "【minecraft】　PC初心者のマインクラフト　19 【ゆっくり実況】",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/17598437/17598437",
+      "views": 1258374,
+      "published": "2012-04-20T19:58:53+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm17233757",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm17233757",
+      "title": "【閲覧注意】2012 ガチで怖い心霊映像まとめ",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/17233757/17233757",
+      "views": 1169433,
+      "published": "2012-03-12T23:29:49+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm17241344",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm17241344",
+      "title": "【閲覧注意】2012 ガチで怖い心霊映像まとめ その2",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/17241344/17241344",
+      "views": 613462,
+      "published": "2012-03-13T21:19:53+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm7342516",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm7342516",
+      "title": "呪いのビデオ",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/7342516/7342516",
+      "views": 278540,
+      "published": "2009-06-14T16:00:34+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm17441713",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm17441713",
+      "title": "【閲覧注意】2012 ガチで怖い心霊映像まとめ その3",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/17441713/17441713",
+      "views": 265986,
+      "published": "2012-04-03T02:51:54+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm21559359",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm21559359",
+      "title": "【閲覧注意】　偶然にも生放送中に映ってしまった恐怖映像",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/21559359/21559359",
+      "views": 161305,
+      "published": "2013-08-10T17:43:27+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm15205060",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm15205060",
+      "title": "ドラマの撮影で映ってしまった恐ろしい顔",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/15205060/15205060",
+      "views": 133965,
+      "published": "2011-08-03T23:11:00+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm17657805",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm17657805",
+      "title": "【深夜閲覧注意】 ガチで怖い心霊映像 総まとめ",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/17657805/17657805",
+      "views": 128664,
+      "published": "2012-04-27T11:56:48+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm16743857",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm16743857",
+      "title": "身の毛もよだつ心霊映像BEST10　10位～6位",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/16743857/16743857",
+      "views": 100936,
+      "published": "2012-01-20T20:58:45+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm17302962",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm17302962",
+      "title": "【脱肛注意】2012 ガチだったらマジビビるわぁ心霊映像まとめ①",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/17302962/17302962",
+      "views": 96758,
+      "published": "2012-03-20T04:13:38+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm18060431",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm18060431",
+      "title": "【脱肛注意】2012 ガチだったらマジビビるわぁ心霊映像まとめ④",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/18060431/18060431",
+      "views": 81556,
+      "published": "2012-06-10T17:42:54+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm19647705",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm19647705",
+      "title": "【ゆっくり実況】大貝獣物語　第十七話",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/19647705/19647705",
+      "views": 81014,
+      "published": "2012-12-23T12:40:44+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm17508530",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm17508530",
+      "title": "【脱肛注意】2012 ガチだったらマジビビるわぁ心霊映像まとめ②",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/17508530/17508530",
+      "views": 74578,
+      "published": "2012-04-10T03:30:46+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm9436885",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm9436885",
+      "title": "心霊映像",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/9436885/9436885",
+      "views": 70788,
+      "published": "2010-01-19T22:13:37+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm37159742",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm37159742",
+      "title": "ホモと見る台湾のやばいホモビ２(復讐編）",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/37159742/37159742.88853198",
+      "views": 69527,
+      "published": "2020-07-08T21:46:03+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm2592100",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm2592100",
+      "title": "実録！呪われた心霊体験　怨霊激撮100連発!!３「遂に完結」「R版」ラスト",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/2592100/2592100",
+      "views": 64856,
+      "published": "2008-03-10T11:25:14+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm9436876",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm9436876",
+      "title": "心霊映像",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/9436876/9436876",
+      "views": 61353,
+      "published": "2010-01-19T22:12:45+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm18434496",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm18434496",
+      "title": "【脱肛注意】2012 ガチだったらマジビビるわぁ心霊映像まとめ⑤",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/18434496/18434496",
+      "views": 60776,
+      "published": "2012-07-24T20:02:26+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm11821131",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm11821131",
+      "title": "恐怖！身も凍える呪われた心霊映像 1/5",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/11821131/11821131",
+      "views": 58840,
+      "published": "2010-08-20T22:24:29+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm19743593",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm19743593",
+      "title": "海外の本当にあった呪いのビデオ",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/19743593/19743593",
+      "views": 58254,
+      "published": "2013-01-03T19:58:12+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm7676767",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm7676767",
+      "title": "ドライブレコーダー",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/7676767/7676767",
+      "views": 57104,
+      "published": "2009-07-19T10:32:08+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm8174869",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm8174869",
+      "title": "心霊映像　防犯カメラに映った首から上の無い霊",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/8174869/8174869",
+      "views": 54712,
+      "published": "2009-09-09T03:17:17+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm18697893",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm18697893",
+      "title": "【脱肛注意】2012 ガチだったらマジビビるわぁ心霊映像まとめ⑦",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/18697893/18697893",
+      "views": 53604,
+      "published": "2012-08-24T05:53:42+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm21581126",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm21581126",
+      "title": "【閲覧注意】2013 ガチだったらマジビビるわぁ心霊映像 ⑲",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/21581126/21581126",
+      "views": 53534,
+      "published": "2013-08-13T12:14:19+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm17835852",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm17835852",
+      "title": "【脱肛注意】2012 ガチだったらマジビビるわぁ心霊映像まとめ③",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/17835852/17835852",
+      "views": 52224,
+      "published": "2012-05-16T01:44:37+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm19405278",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm19405278",
+      "title": "【脱肛注意】2012 ガチだったらマジビビるわぁ心霊映像まとめ⑩",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/19405278/19405278",
+      "views": 48367,
+      "published": "2012-11-21T20:16:28+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm20867901",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm20867901",
+      "title": "【閲覧注意】2013 ガチだったらマジビビるわぁ心霊映像 ⑮",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/20867901/20867901",
+      "views": 47227,
+      "published": "2013-05-15T03:08:42+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm18573214",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm18573214",
+      "title": "【1/2】【閲覧注意】ニコ生ナックルズ「怖すぎる動画２」～テレビが放送",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/18573214/18573214",
+      "views": 45174,
+      "published": "2012-08-09T22:43:19+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm23980300",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm23980300",
+      "title": "ガチだったらマジビビるわぁ心霊映像まとめ 28　レ無し32連発ハイライト",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/23980300/23980300",
+      "views": 42862,
+      "published": "2014-07-11T23:03:53+09:00",
+      "author": ""
+    },
+    {
+      "id": "niconico:https://www.nicovideo.jp/watch/sm27336624",
+      "site": "niconico",
+      "url": "https://www.nicovideo.jp/watch/sm27336624",
+      "title": "ガチだったらマジビビるわぁ心霊映像まとめ 40",
+      "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/27336624/27336624",
+      "views": 41850,
+      "published": "2015-10-10T08:16:21+09:00",
+      "author": ""
+    }
+  ]
 }
