@@ -150,10 +150,38 @@ async function searchNiconico(term) {
   const j=await resp.json();
   return responseItems(j).map(v=>normalizeRecord({url:v.contentId?'https://www.nicovideo.jp/watch/'+encodeURIComponent(v.contentId):null,title:v.title,site:'niconico',thumbnail:v.thumbnailUrl,views:v.viewCounter,published:v.startTime})).filter(Boolean);
 }
+function externalSearchLinks(query) {
+  const term=encodeURIComponent(query.trim());
+  return [
+    ['YouTube','https://www.youtube.com/results?search_query='+term],
+    ['ニコニコ動画','https://www.nicovideo.jp/search/'+term],
+    ['Dailymotion','https://www.dailymotion.com/search/'+term+'/videos'],
+    ['Vimeo','https://vimeo.com/search?q='+term],
+    ['PeerTube (Sepia Search)','https://sepiasearch.org/search?search='+term],
+  ];
+}
+function renderExternalSearch() {
+  const query=$('#query').value.trim();
+  $('#externalSearch').hidden=!query || $('#searchMode').value!=='external';
+  $('#externalLinks').replaceChildren(...(query ? externalSearchLinks(query).map(([name,url])=>{
+    const link=document.createElement('a');link.className='btn subtle';
+    link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=name+'で検索 ↗';return link;
+  }) : []));
+}
+function changeSearchMode() {
+  const external=$('#searchMode').value==='external';
+  $('#runSearch').textContent=external?'⌕ 検索ページを表示':'⌕ アプリ内を検索';
+  $('#apiOptions').hidden=external;
+  renderExternalSearch();
+}
+
 async function runSearch(event) {
   event?.preventDefault();
   if (state.searching) return;
   const query=$('#query').value.trim();if (!query) return;
+  if ($('#searchMode').value==='external') {
+    renderExternalSearch();showNotice('');setStatus('開きたいサイトを選んでください。検索ページが別タブで開きます。');return;
+  }
   state.searching=true;$('#runSearch').disabled=true;state.query=query;
   const terms=queryTerms(query,$('#languageMode').value,$('#extraTerms').value);
   const source=$('#sourceFilter').value;const tasks=[];
@@ -232,6 +260,9 @@ async function importBackup(event) {
 }
 async function init() {
   setupGitHubLink();
+  $('#query').addEventListener('input',renderExternalSearch);
+  $('#searchMode').addEventListener('change',changeSearchMode);
+  changeSearchMode();
   $('#searchForm').addEventListener('submit',runSearch);
   $('#chips').addEventListener('click',e=>{const b=e.target.closest('button[data-key]');if(!b)return;$('#query').value=b.dataset.key;runSearch();});
   $('#sortMode').addEventListener('change',render);$('#sourceFilter').addEventListener('change',render);
