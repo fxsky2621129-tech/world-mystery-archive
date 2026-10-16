@@ -101,3 +101,21 @@ test('failed backup saves are not reported as successful',async()=>{
   assert.equal(a.run('state.favorites.length'),0);
   assert.match(a.element('#notice').textContent,/保存できません/);
 });
+
+test('external links preserve Japanese and reserved characters as one keyword',()=>{
+  const a=app();a.ctx.keyword='動物 & おもしろ/#?';
+  const links=a.run('externalSearchLinks(keyword)');
+  assert.equal(links.length,5);
+  assert.equal(new URL(links[0][1]).searchParams.get('search_query'),a.ctx.keyword);
+  assert.equal(decodeURIComponent(new URL(links[1][1]).pathname.slice('/search/'.length)),a.ctx.keyword);
+});
+test('external mode does not call video APIs or replace the library',async()=>{
+  const a=app();a.element('#query').value='cats';a.element('#searchMode').value='external';
+  a.ctx.document.createElement=()=>({});
+  a.ctx.fetch=()=>{throw Error('external mode must not fetch');};
+  a.run("state.live=[{title:'keep'}]");
+  await a.run('runSearch()');
+  assert.equal(a.element('#externalLinks').children.length,5);
+  assert.equal(a.element('#externalLinks').children[0].target,'_blank');
+  assert.equal(a.run('state.live[0].title'),'keep');
+});
